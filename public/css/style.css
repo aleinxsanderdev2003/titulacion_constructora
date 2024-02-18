@@ -1,0 +1,648 @@
+
+
+/* contador*/
+/* Estilos para la fuente cursive-font */
+.cursive-font {
+    font-family: "Kaushan Script", cursive;
+    }
+
+    /* Color primario */
+    .primary-color {
+    color: #FBB448 !important;
+    }
+
+    .gtco-container {
+    max-width: 1100px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+
+    .feature-center {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    bottom: 30px;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+
+
+    }
+
+
+    .gtco-heading {
+    margin-bottom: 5em;
+    position: relative;
+    transform: translateY(50%);
+    transform: translateX(25%);
+
+    }
+
+
+
+    .gtco-heading p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: gray;
+    }
+
+    /* Estilos para secciones con fondo */
+    #gtco-counter,
+    .gtco-section {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    }
+
+    /* Estilos para texto pequeño en el centro */
+    #gtco-counter .intro-text-small {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 10px;
+    }
+
+    /* Estilos para títulos h1 y h2 */
+    #gtco-counter h1,
+    #gtco-counter h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    }
+
+    #gtco-counter h1 {
+    margin-bottom: 30px;
+    font-size: 59px;
+    line-height: 1.2;
+    font-weight: 300;
+    }
+
+
+
+    #gtco-counter h2 {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    }
+
+    /* Estilos para los contadores */
+    #gtco-counter {
+    text-align: center;
+    }
+
+    #gtco-counter .counter {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #FBB448;
+    font-weight: 100;
+    display: block;
+
+    }
+
+    #gtco-counter .counter-label {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.1em;
+    }
+
+    /* responsive */
+    @media screen and (max-width: 768px) {
+    #gtco-counter .animate-box {
+        margin-bottom: 50px;
+    }
+    }
+    @media screen and (max-width: 768px) {
+    .feature-center {
+        position: relative;
+        top: 30px;
+        margin-bottom: 20px;
+    }
+    }
+    @media screen and (max-width: 768px) {
+    .gtco-heading h2 {
+        font-size: 26px;
+    }
+
+    .gtco-heading{
+        transform: translateY(30%);
+    }
+    }
+
+    @media screen and (max-width: 768px) {
+    #gtco-counter h1 {
+        font-size: 34px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    }
+/* Fin */
+
+
+
+
+/* Prueba card */
+.cartass{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    bottom: 85px;
+    margin-bottom: 25px;
+    top: 10px;
+    width: 82%;
+    left: 180px;
+
+
+
+  }
+
+  @media only screen and (max-width: 991px) {
+    .cartass{
+        top: 10px;
+        width: 82%;
+        left: 50px;
+
+      }
+  }
+
+  .card {
+    top: 70px;
+    margin-bottom: 120px;
+    width: 400px;
+    height: 0;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(42, 42, 42);
+    box-shadow: 0 5px 10px black;
+
+    transition: 0.4s;
+
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px black;
+    border-radius: 60px;
+  }
+
+  .card .img-card {
+    background-image: url(../img/EMPRESA2.jpg);
+
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+  }
+
+  .card .content {
+    width: 100%;
+    height: 73%;
+    display: grid;
+    grid-template-rows: 50px 15px 50px;
+    padding: 1px 10px;
+
+  }
+
+  .card .content .title h3 {
+    color: black;
+  }
+
+  .card .content .text p {
+    color: black;
+    font-size: 15px;
+  }
+
+  #carta2 .img-card {
+    background-image: url(../img/EMPRESA2.jpg);
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+  }
+
+  #carta3 .img-card {
+    background-image: url(../img/EMPRESA2.jpg);
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+  }
+  /* fin */
+
+
+
+
+/*********************************
+10. Register
+*********************************/
+
+.register
+{
+	width: 100%;
+    border-style: solid;
+    margin-bottom: 30px;
+
+}
+
+
+
+
+
+/*acordion*/
+.accordion {
+    width: 720px;
+    margin: 90px auto;
+    color: black;
+    background-color: white;
+    padding: 45px 45px;
+  }
+
+  .accordion .contenedor {
+    position: relative;
+    margin: 10px 10px;
+  }
+
+  .accordion .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+  }
+
+  .accordion .label::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+  }
+
+  .accordion .content4 {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 780px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid grey;
+  }
+
+  .accordion .contenedor.active .content4 {
+    height: 150px;
+  }
+
+  .accordion .contenedor.active .label::before {
+    content: '-';
+    font-size: 30px;
+  }
+
+
+
+
+/* muestra*/
+
+.action {
+    background: #f2f2f2;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 50px 0;
+
+}
+#action-01{
+
+    position: relative;
+    left: 100px;
+
+}
+.action .left-text h4 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600px;
+    letter-spacing: 1px;
+    transform: translateX(15%);
+
+}
+.left-text{
+    transform: translateX(-25%);
+
+}
+
+.action .left-text p {
+    padding-top: 20px;
+}
+
+.action .left-text em {
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.action .right-image {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 30px;
+    height: 80%;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#fotos{
+    width: 450px;
+}
+
+.right-image{
+    transform: translateX(-5%);
+    width: 700px;
+
+}
+
+
+
+@media (max-width: 980px) {
+
+    .action .right-image {
+        padding: 20px;
+        text-align: center;
+
+
+    }
+
+    .left-text h4{
+        position: relative;
+        right: 50px;
+
+    }
+    #action-01{
+
+        width: 800px;
+    }
+
+    #fotos{
+        position: relative;
+        height: 200px;
+        width: 350px;
+        top: 70px;
+
+        transform: translateX(-20%);
+
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .left-text {
+        position: relative;
+        left: 40px;
+    }
+
+    #fotos{
+        position: relative;
+        height: 200px;
+        width: 350px;
+        top: -10px;
+
+
+
+        transform: translateX(-1%);
+
+    }
+}
+
+
+
+/*********************************
+11. Search
+*********************************/
+
+.search_section
+{
+	width: 100%;
+	height: 100%;
+	background: #000000;
+}
+.search_content
+{
+	width: 522px;
+}
+.search_background
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	opacity: 0.23;
+}
+.search_title
+{
+	color: #1a1a1a;
+}
+
+/*********************************
+11.1 Search Form
+*********************************/
+
+.search_form
+{
+	margin-top: 57px;
+}
+.input_field
+{
+	width: 100%;
+	height: 42px;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	border: solid 2px #FFFFFF;
+	padding-left: 25px;
+	margin-bottom: 24px;
+}
+input:last-of-type
+{
+	margin-bottom: 0px;
+}
+.input_field:focus
+{
+	outline: none !important;
+	border: solid 2px #ffb606;
+}
+.search_submit_button
+{
+	width: 100%;
+	height: 48px;
+	background: #ffb606;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: 28px;
+	border: none;
+	cursor: pointer;
+}
+.search_submit_button:hover
+{
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+.search_submit_button:focus
+{
+	outline: solid 2px #FFFFFF;
+}
+
+/* proyectos */
+
+.gallery .all{
+    color: black;
+
+}
+.gallery{
+    padding: 80px 0px;
+
+
+}
+
+.gallery img{
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(250, 247, 247);
+}
+
+#gallery-popup .modal-img{
+    width: 100%;
+
+}
+p{
+    color: var(--letras);
+    text-align: center;
+
+}
+
+
+#galerias{
+    cursor: pointer;
+
+}
+
+
+.all{
+
+    display: inline;
+    padding: 5px 15px;
+
+
+}
+
+
+/*  Call to Action Start*/
+
+.call-to-action {
+	background: url(../img/EMPRESA2.jpg);
+	background-attachment: fixed;
+	background-repeat: repeat;
+}
+
+.call-to-action h2 {
+	font-size: 30px;
+	color: #ffffff;
+}
+
+.bg-cover {
+	background-repeat: no-repeat;
+}
+.section-space-padding {
+    padding: 100px 0px;
+}
+.button {
+	border: none;
+	border-radius: 5px;
+	font-family: inherit;
+	font-size: 17px;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 20px 60px;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.button:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.button-style {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+.button-style:hover,
+.button-style:active,
+.button-style:focus {
+	color: #ffffff;
+	background: #4c9cef;
+}
+
+.button-style-color-2:hover,
+.button-style-color-2:active,
+.button-style-color-2:focus {
+	color: #ffffff;
+	background: #f7639a !important;
+}
+
+.button-style-dark {
+	border: 3px solid #000000;
+	color: #000000;
+}
+
+    @media only screen and (max-width: 991px) {
+     .call-to-action h2 {
+        font-size: 20px;
+
+    }
+
+}
+
+    @media only screen and(max-width:767px){
+        .call-to-action h2 {
+        font-size: 18px;
+        line-height: 35px;
+	}
+    }
+
+
+
+
