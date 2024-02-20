@@ -404,6 +404,7 @@
 
 
 
+        {{-- acordion actualizado --}}
         <!-- Register -->
         <div class="register">
             <div class="container-fluid">
