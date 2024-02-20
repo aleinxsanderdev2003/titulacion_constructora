@@ -1,11 +1,15 @@
-const accordion = document.getElementsByClassName('contenedor');
+const accordionItems = document.querySelectorAll('.contenedor');
 
-for (i=0; i<accordion.length; i++) {
-accordion[i].addEventListener('click', function () {
-    this.classList.toggle('active')
-})
-};
-
+accordionItems.forEach(item => {
+    item.addEventListener('click', function () {
+        accordionItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
+        });
+        this.classList.toggle('active');
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     const counters = document.querySelectorAll('.counter');

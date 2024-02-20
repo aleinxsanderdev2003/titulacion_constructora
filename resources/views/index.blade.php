@@ -164,7 +164,7 @@
     </div>
 
     <style>
-        <style>
+
     /* Estilo para los botones de navegación izquierda y derecha */
     .hero_slider_nav {
         background:#555 ;
@@ -404,12 +404,11 @@
 
 
 
-        {{-- acordion actualizado --}}
         <!-- Register -->
         <div class="register">
             <div class="container-fluid">
                 <div class="row row-eq-height">
-                    <div class="col-md-6 nopadding">
+                    <div class="col-md-6" id="accordion-entero">
                         <!-- Contenido de preguntas frecuentes -->
                         <div class="accordion-body">
                             <div class="accordion">
@@ -435,14 +434,20 @@
                                     <div class="content4">Recibimos cualquier tipo de pago, depósitos, etc. Gracias por su compra, ayudará a un artesano peruano.</div>
                                 </div>
                                 <hr>
+                                <div class="contenedor">
+                                    <div class="label">¿Puedo comprar con efectivo o tarjeta?</div>
+                                    <div class="content4">Recibimos cualquier tipo de pago, depósitos, etc. Gracias por su compra, ayudará a un artesano peruano.</div>
+                                </div>
+                                <hr>
                             </div>
                         </div>
                     </div>
+                    {{-- desde aca acaba --}}
 
                     <div class="col-md-6 nopadding">
                         <!-- Formulario de pedido de información -->
                         <div class="search_section d-flex flex-column align-items-center justify-content-center">
-                            <div class="search_background" style="background-image:url(https://images.unsplash.com/photo-1593313637552-29c2c0dacd35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);"></div>
+                            <div class="search_background"></div>
                             <div class="search_content text-center">
                                 <h1 class="search_title text-white" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Respondemos cualquier duda</h1>
                                 <form id="search_form" class="search_form" action="post">
