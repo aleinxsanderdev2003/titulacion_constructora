@@ -463,12 +463,72 @@
             </div>
         </div>
 
+        {{-- cartas de noticias --}}
+        <div class="titulo_noticias">
+            <h1 class="search_title text-black" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif; text-align: center; ">NOTICIAS</h1>
+            <div class="card-deck" style="left: 5%; width: 90vw; display: flex; flex-wrap: wrap; justify-content: space-around;">
 
+                <div class="card" id="card1" style="height: 450px; ">
+                    <div class="img-card1"></div>
+                    <div class="card-body">
+                        <div class="title">
+                            <h3>noticia1</h3>
+                        </div>
 
+                        <div class="text">
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi veniam itaque explicabo vero accusamus, nemo sapiente harum, volup.</p>
+                        </div>
 
+                    </div>
+                </div>
+
+                <div class="card" id="card2" style="height: 450px; ">
+                    <div class="img-card2"></div>
+                    <div class="card-body">
+                        <div class="title">
+                            <h3>noticia2</h3>
+                        </div>
+
+                        <div class="text">
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum pariatur quibusdam quis qui possimus aut aliquam, obcaecati molestias </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card" id="card3" style="height: 450px;">
+                    <div class="img-card3"></div>
+                    <div class="card-body">
+                        <div class="title">
+                            <h3>noticia3</h3>
+                        </div>
+
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium distinctio soluta voluptates, excepturi sapiente illo nemo numquam es.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card" id="card4" style="height: 450px; ">
+                    <div class="img-card4"></div>
+                    <div class="card-body">
+                        <div class="title">
+                            <h3>noticia4</h3>
+                        </div>
+
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium distinctio soluta voluptates, excepturi sapiente illo nemo numquam esse al.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {{-- cartass --}}
 
       <!-- Call to Action Start -->
-      <section class="call-to-action bg-cover section-space-padding text-center">
+      <section class="call-to-action bg-cover section-space-padding text-center" style="margin-top: 100px;">
         <div class="container">
           <div class="row">
             <div class="col-md-8">

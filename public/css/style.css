@@ -654,5 +654,40 @@ p{
     }
 
 
+/* noticia card */
+
+.card .img-card1 {
+    background-image: url(../img/noticia1.jpg);
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .card .img-card2 {
+    background-image: url(../img/noticia2.jpg);
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .card .img-card3 {
+    background-image: url(../img/noticia3.jpg);
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .card .img-card4 {
+    background-image: url(../img/noticia4.jpg);
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+ /* fin */
 
 
