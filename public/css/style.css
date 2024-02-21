@@ -1,5 +1,3 @@
-
-
 /* contador*/
 /* Estilos para la fuente cursive-font */
 .cursive-font {
@@ -238,15 +236,52 @@
 
 
 
+/* noticia card */
 
-/*********************************
+  .card .img-card1 {
+    background-image: url(../img/noticia1.jpg);
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .card .img-card2 {
+    background-image: url(../img/noticia2.jpg);
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .card .img-card3 {
+    background-image: url(../img/noticia3.jpg);
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .card .img-card4 {
+    background-image: url(../img/noticia4.jpg);
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+ /* fin */
+
+
+
+
+/***********
 10. Register
-*********************************/
+***********/
 
 .register
 {
 	width: 100%;
-    height: 800px;
     border-style: solid;
     margin-bottom: 30px;
 
@@ -255,21 +290,13 @@
 
 
 
-/*acordion*/
-#accordion-entero{
-    width: 300px;
-    height: 794px;
-}
 
-.accordion-body{
-    height: auto;
-}
-
-
+/acordion/
 .accordion {
-    width: 100%;
-    margin: 30px auto;
+    width: 720px;
+    margin: 90px auto;
     color: black;
+    background-color: white;
     padding: 45px 45px;
   }
 
@@ -280,7 +307,7 @@
 
   .accordion .label {
     position: relative;
-    padding: 10px ;
+    padding: 10px 0;
     font-size: 30px;
     color: black;
     cursor: pointer;
@@ -298,22 +325,23 @@
 
   .accordion .content4 {
     position: relative;
+    background: white;
     height: 0;
     font-size: 20px;
     text-align: justify;
-    width: 100%;
+    width: 780px;
     overflow: hidden;
     transition: 0.5s;
   }
 
   .accordion hr {
-    width: 100%;
+    width: 100;
     margin-left: 0;
     border: 1px solid grey;
   }
 
   .accordion .contenedor.active .content4 {
-    height: 100px;
+    height: 150px;
   }
 
   .accordion .contenedor.active .label::before {
@@ -321,11 +349,7 @@
     font-size: 30px;
   }
 
-  .col-md-6.nopadding .search_background {
-    background-image: url(https://qlu.ac.pa/wp-content/uploads/2023/04/ingeniero-civil-trabajador-construccion-arquitectos-que-usan-cascos-chalecos-seguridad-estan-trabajando-juntos-sitio-construccion-construyendo-casa-concepto-trabajo-equipo-cooperacion-scaled.jpg);
-    background-size: cover ;
 
-}
 
 
 /* muestra*/
@@ -444,9 +468,9 @@
 
 
 
-/*********************************
+/***********
 11. Search
-*********************************/
+***********/
 
 .search_section
 {
@@ -475,9 +499,9 @@
 	color: #1a1a1a;
 }
 
-/*********************************
+/***********
 11.1 Search Form
-*********************************/
+***********/
 
 .search_form
 {
@@ -654,7 +678,3 @@ p{
         line-height: 35px;
 	}
     }
-
-
-
-
