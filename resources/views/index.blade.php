@@ -49,10 +49,8 @@
             <!-- Hero Slides -->
             <div class="hero_slider owl-carousel">
 
-<<<<<<< HEAD
                 <!-- Hero Slide 1 -->
                 <div class="hero_slide" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(img/CN3.jpg);">
-=======
                 <!-- Hero Slide -->
                 <div class="hero_slide">
 
@@ -85,7 +83,6 @@
         </ul>
     </div>
 </nav>
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
                     <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                         <div class="hero_slide_content text-center">
                             <h1 style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Bienvenido a la Constructora</h1>
@@ -93,10 +90,8 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
                 <!-- Hero Slide 2 -->
                 <div class="hero_slide" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1997&q=80);">
-=======
                 <!-- Hero Slide -->
                 <div class="hero_slide">
                     <div class="hero_slide_background" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1997&q=80)"></div>
@@ -134,7 +129,6 @@
         </ul>
     </div>
 </nav>
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
                     <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                         <div class="hero_slide_content text-center">
                             <h1 style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Edificaciones y Servicios Generales </h1>
@@ -142,10 +136,8 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
                 <!-- Hero Slide 3 -->
                 <div class="hero_slide" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);">
-=======
                 <!-- Hero Slide -->
                 <div class="hero_slide">
                     <div class="hero_slide_background" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)"></div>
@@ -177,7 +169,6 @@
         </ul>
     </div>
 </nav>
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
                     <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                         <div class="hero_slide_content text-center">
                             <h1 style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Contacta ya!</h1>
@@ -200,9 +191,7 @@
         </div>
     </div>
 
-<<<<<<< HEAD
 
-=======
     <style>
 
     /* Estilo para los botones de navegación izquierda y derecha */
@@ -245,7 +234,6 @@
             }
         }
     </style>
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
 
     <div class="hero_boxes">
         <div class="hero_boxes_inner">
@@ -355,7 +343,6 @@
                 border: 5px solid #fff;
             }
         </style>
-<<<<<<< HEAD
         <style>
             .hero_slide {
                 position: relative;
@@ -395,7 +382,6 @@
                         <div class="right-image" style="background-image: url(../img/EMPRESA2.jpg);">
                         </div>
                     </div>
-=======
    <section class="action text-center">
     <div class="container">
         <div class="row align-items-center">
@@ -404,7 +390,6 @@
                     <h1 class="font-weight-bold">Amet porro numquam ratione</h1>
                     <p class="lead" style="font-family: 'Acme', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ut explicabo magni sapiente.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore at quia, vel in repellendus, cumque dolorem autem ad quidem mollitia porro blanditiis atque rerum debitis eveniet nostrum aliquam. Sint aperiam expedita sapiente amet officia quis perspiciatis adipisci, iure dolorem esse exercitationem!</p>
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
                 </div>
             </div>
             <div class="col-md-6">
@@ -575,6 +560,13 @@
             </div>
         </div>
 
+
+  
+
+
+
+
+
         {{-- cartas de noticias --}}
         <div class="titulo_noticias">
             <h1 class="search_title text-black" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif; text-align: center; ">NOTICIAS</h1>
@@ -701,10 +693,13 @@
 
 
 
+
+
 </style>
 
 
-<<<<<<< HEAD
+
+
             <script src="{{ asset('js/javaIndex.js') }}"></script>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -712,18 +707,13 @@
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-=======
     <script src="{{ asset('js/javaIndex.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/6b76d54a65.js" crossorigin="anonymous"></script>
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
 
 @endsection
 
 </body>
-<<<<<<< HEAD
 
-=======
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
 </html>

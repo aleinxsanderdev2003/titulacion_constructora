@@ -241,26 +241,18 @@
 
 /*********************************
 10. Register
-<<<<<<< HEAD
 ***********/
-=======
-*********************************/
 
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
 .register
 {
 	width: 100%;
     height: 800px;
-    border-style: solid;
+    /* border-style: solid; */
     margin-bottom: 30px;
 
 }
 
-
-<<<<<<< HEAD
-=======
 /*acordion*/
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
 #accordion-entero{
     width: 300px;
     height: 794px;
@@ -273,7 +265,7 @@
 
 .accordion {
     width: 100%;
-    margin: 0phppx auto;
+    margin: 0px auto;
     color: black;
     padding: 45px 45px;
   }
@@ -281,12 +273,19 @@
   .accordion .contenedor {
     position: relative;
     margin: 10px 10px;
+    border-radius: 50px ;
+    border: 2px solid black;
+  }
+
+  .contenedor.active{
+    border-radius: none;
+    border-style: none;
   }
 
   .accordion .label {
     position: relative;
     padding: 10px ;
-    font-size: 30px;
+    font-size: 22px;
     color: black;
     cursor: pointer;
   }
@@ -296,7 +295,7 @@
     color: black;
     position: absolute;
     top: 50%;
-    right: -5px;
+    right: 5px;
     font-size: 30px;
     transform: translateY(-50%);
   }
@@ -308,7 +307,6 @@
     text-align: justify;
     width: 100%;
     overflow: hidden;
-    transition: 0.5s;
   }
 
   .accordion hr {
@@ -318,12 +316,25 @@
   }
 
   .accordion .contenedor.active .content4 {
-    height: 100px;
+    height: 120px;
+
   }
+
+  .accordion .contenedor.active .label {
+    margin: 10px 10px;
+    border-radius: 50px ;
+    border: 2px solid black;
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
 
   .accordion .contenedor.active .label::before {
     content: '-';
     font-size: 30px;
+
   }
 
   .col-md-6.nopadding .search_background {
@@ -331,10 +342,7 @@
     background-size: cover ;
 
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12
 
 /* muestra*/
 
@@ -343,6 +351,7 @@
     margin-top: 25px;
     margin-bottom: 25px;
     padding: 50px 0;
+
 
 }
 #action-01{
@@ -456,19 +465,21 @@
 11. Search
 *********************************/
 
-.search_section
-{
-	width: 100%;
-	height: 100%;
-	background: #000000;
+.col-md-6.nopadding .acordion-foto {
+  background-image: url(https://i.ibb.co/4ZCKDwB/fotos-inges.png);
+  background-size: contain ;
+  filter: drop-shadow(4px 6px 12px black);
 }
-.search_content
-{
-	width: 522px;
+
+
+
+.foto-acordion{
+  width: 100%;
+  height: 100%;
 }
-.search_background
-{
-	position: absolute;
+
+.acordion-foto{
+  position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -476,12 +487,98 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	opacity: 0.23;
+
 }
-.search_title
+
+.search_content
 {
-	color: #1a1a1a;
+    margin: 50px;
+    /* margin-top: 500px; */
+	width: 622px;
+    transform: translateX(-2%);
 }
+
+
+
+
+/* hero area */
+.hero-prueba {
+    background-image: url(https://images.unsplash.com/photo-1608159503633-9435943bb7f0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+  }
+
+  .hero-texto {
+    display: table;
+    height: 100%;
+  }
+
+  .hero-tablecell {
+    display: table-cell;
+
+  }
+
+  .hero-area {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+  }
+
+
+
+  .hero-area:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #07212e;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+
+  .hero-texto .search_title {
+    font-size: 35px;
+    font-weight: 700;
+
+    color: #fff;
+  }
+
+  .hero-area div {
+    height: 100%;
+  }
+
+  .hero-area div.hero-texto {
+    height: 100%;
+    width: 100%;
+  }
+
+  .hero-area div.hero-tablecell {
+    margin: 30px;
+    padding-top: 50px;
+    height: auto;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-area div.hero-tablecell div {
+    height: auto;
+    vertical-align: middle;
+  }
+
+
+
+/* fin */
+
+
 
 /*********************************
 11.1 Search Form
@@ -489,16 +586,21 @@
 
 .search_form
 {
-	margin-top: 57px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .input_field
 {
 	width: 100%;
 	height: 42px;
-	background: #FFFFFF;
+    background: transparent; /* Ajusta el último valor para cambiar la opacidad */
 	box-sizing: border-box;
 	border: solid 2px #FFFFFF;
 	padding-left: 25px;
+    border-radius: 5px;
 	margin-bottom: 24px;
 }
 input:last-of-type
@@ -520,7 +622,8 @@ input:last-of-type
 	text-transform: uppercase;
 	font-weight: 700;
 	margin-top: 28px;
-	border: none;
+	border-radius: 50px;
+    border: none;
 	cursor: pointer;
 }
 .search_submit_button:hover
@@ -578,20 +681,7 @@ p{
 
 /*  Call to Action Start*/
 
-.call-to-action {
-	background: url(../img/EMPRESA2.jpg);
-	background-attachment: fixed;
-	background-repeat: repeat;
-}
 
-.call-to-action h2 {
-	font-size: 30px;
-	color: #ffffff;
-}
-
-.bg-cover {
-	background-repeat: no-repeat;
-}
 .section-space-padding {
     padding: 100px 0px;
 }
@@ -648,22 +738,7 @@ p{
 	color: #000000;
 }
 
-    @media only screen and (max-width: 991px) {
-     .call-to-action h2 {
-        font-size: 20px;
 
-    }
-
-}
-
-    @media only screen and(max-width:767px){
-        .call-to-action h2 {
-        font-size: 18px;
-        line-height: 35px;
-	}
-    }
-<<<<<<< HEAD
-=======
 
 
 /* noticia card */
@@ -703,4 +778,3 @@ p{
  /* fin */
 
 
->>>>>>> 8e47c7e3944e8e8a542ef22591e035491b265c12

@@ -335,23 +335,46 @@
 
                 <div class="col-md-6 nopadding">
                     <!-- Formulario de pedido de información -->
-                    <div class="search_section d-flex flex-column align-items-center justify-content-center">
-                        <div class="search_background"></div>
-                        <div class="search_content text-center">
-                            <h1 class="search_title text-white" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Respondemos cualquier duda</h1>
-                            <form id="search_form" class="search_form" action="post">
-                                <input id="search_form_name" class="input_field search_form_name" type="text" placeholder="Nombre Completo" required="required" data-error="Course name is required.">
-                                <input id="search_form_category" class="input_field search_form_category" type="text" placeholder="Correo">
-                                <input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Mensaje">
-                                <button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">Enviar</button>
-                            </form>
-                        </div>
+                    <div class="foto-acordion d-flex flex-column align-items-center justify-content-center">
+                        <div class="acordion-foto"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
+
+        {{--Nuevo  --}}
+            <!-- hero area -->
+            <div class="hero-area hero-prueba">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 offset-lg-2 text-center">
+                            <div class="hero-texto">
+                                <div class="hero-tablecell">
+                                    {{-- formulario --}}
+                                    <div class="search_content text-center">
+                                        <div><h1 class="search_title text-white" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Respondemos cualquier duda</h1></div>
+                                            <div class="formulario-prueba">
+                                                <form id="search_form" class="search_form" action="post">
+                                                    <input id="search_form_name" class="input_field search_form_name" type="text" placeholder="Nombre Completo" required="required" data-error="Course name is required.">
+                                                    <input id="search_form_category" class="input_field search_form_category" type="text" placeholder="Correo">
+                                                    <input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Mensaje">
+                                                    <button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">Enviar</button>
+                                                </form>
+                                            </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        {{-- fin --}}
     {{-- cartas de noticias --}}
     <div class="titulo_noticias">
         <h1 class="search_title text-black" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif; text-align: center; ">NOTICIAS</h1>
@@ -420,66 +443,7 @@
 
 
 
-        <!-- Call to Action Start -->
-        <section class="call-to-action bg-cover section-space-padding text-center" style="margin-top: 100px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h2 style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">¿Quieres saber más sobre nosotros?</h2>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <a class="buttone" href="#contact">Contacto</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <style>
-            .buttone {
-                cursor: pointer;
-                position: relative;
-                padding: 10px 24px;
-                font-size: 18px;
-                color: rgb(240, 240, 240);
-                border: 2px solid rgb(255, 174, 0);
-                border-radius: 34px;
-                background: linear-gradient(to right, #fe8c00, #f83600);
-                font-weight: 600;
-                transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-                overflow: hidden;
-            }
-
-            .buttone::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                margin: auto;
-                width: 50px;
-                height: 50px;
-                border-radius: inherit;
-                scale: 0;
-                z-index: -1;
-                background: linear-gradient(to right, #fe8c00, #f83600);
-                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-            }
-
-            .buttone:hover::before {
-                scale: 3;
-            }
-
-            .buttone:hover {
-                color: #212121;
-                scale: 1.1;
-                box-shadow: 0 0px 20px rgb(255, 174, 0);
-            }
-
-            .buttone:active {
-                scale: 1;
-            }
-        </style>
 
 
   <!-- Scripts de Bootstrap (asegúrate de incluir Bootstrap JS) -->

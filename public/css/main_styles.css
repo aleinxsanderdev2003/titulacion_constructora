@@ -1241,11 +1241,9 @@ section
 
 
 /* inicio clientes */
-.to-animate{
-    width: 30%;
-    position: relative;
-    left: 380px;
-}
+
+
+
 
 .partner-logo{
 
@@ -1263,60 +1261,44 @@ section
 
 .fh5co-trusted{
 
-
-    transform: translateX(5%);
+    display: flex;
+    /* transform: translateX(5%); */
     justify-content: center;
     align-items: center;
 }
 
 #fh5co-trusted{
 
-    margin-top: 80px;
-    margin-bottom: 80px;
-    padding-top:20px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding-top:20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
 
 
 }
 
-#techo{
-
-    transform: translateX(-23%);
-}
 
 #Mivi{
 
 
     width: 220px;
-    transform: translateX(-10%);
 }
 
 
-#minis{
-    width: 220px;
-
-    height: 90px;
-    transform: translateX(20%);
-    margin-right: 45px;
-}
 
 
-#muni{
 
-    transform: translateX(37%);
-}
 
 
 #libertad{
 
     position: relative;
 
-    transform: translateX(35%);
 }
 
 
@@ -1324,18 +1306,17 @@ section
 
         width: 60%;
 
-        max-width: 100%;
 
 
     }
 
-    #img-vivienda{
-        padding: 10px;
-        width: 84%;
-        margin: 10px;
+        #img-vivienda{
+            padding: 10px;
+            width: 84%;
+            margin: 10px;
 
 
-    }
+        }
 
     #techoP{
 
@@ -1346,207 +1327,93 @@ section
 #ministerio{
    width: 250px;
    display: flex;
+   justify-content: center;
    align-items: center;
 
 
 }
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (min-width: 579px) and (max-width: 1200px){
     .fh5co-trusted{
-        transform: translateX(1%);
-        margin: 0;
-        height: 300px;
-        padding-right:30px ;
-        width: 85%;
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-items: center;
+        background-color: saddlebrown;
+
 
     }
-    #partes{
-        transform: translateX(4%);
 
-    }
-    #techo{
-
-        height:120px;
-        width: 150px;
-        transform: translateY(70%);
-    }
-    #Mivi{
-
-        height:130px;
-        transform: translateY(60%);
-    }
     #ministerio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        transform: translateY(60%);
-        position: relative;
-        left: 35px;
-        height: 130px;
-        padding: 0px;
-        width: 200px;
+
+     }
+
+    #Clientes-contenedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
     }
-    #municipalidad{
+    .col-md-2{
+        margin: 50px 50px 50px 180px;
+        background-color: #C88E00;
 
-        height: 130px;
-        position: relative;
-        top: 120px;
-        transform: translateX(-20%);
-        width: 120px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
     }
 
-    #libertad{
+     #fotos-cliente{
 
-        height: 120px;
-        width: 130px;
+        margin: 50px 50px 50px 180px;
+        left: 0px;
+        right: 0px;
         position: relative;
-        left: 10px;
-        transform: translateY(75%);
+
+        background-color: #0d2033;
+
+
+    }
+    .to-animate-2{
+        margin: 0;
+        top: 0;
+        background-color: blue;
+    }
+
+    .to-animate-3{
+        margin: 0;
+        background-color: aqua;
 
     }
     .partner-logo img{
-        width: 80px;
-
+        width: 60%;
+        background-color: seagreen;
 
     }
-
-    #ministerio img{
-        width: 200px;
-        transform: translateX(1%);
-    }
-    #municipalidad img{
-        width: 100px;
-    }
-    #libertad img{
-        width:80px ;
-    }
-}
-
-@media only screen and (max-width: 997px){
-
-    .to-animate{
-        transform: translateX(-50%);
-    }
-
-    #partes{
-
+    .partes{
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        text-align: center;
-
+        align-content: center;
+        align-items: center;
 
     }
-     .fh5co-trusted{
 
-        height: 100vh;
-     }
-     #techo{
-
-        position: relative;
-
-        transform:translateY(50%)  translateX(7%);
-     }
-     #Mivi{
-        transform: translateY(60%)translateX(-10%);
-    }
-     #ministerio{
-
-        transform: translateY(85%)translateX(-12%);
-        margin-bottom: 10px;
-        position: relative;
-
-
-     }
-     #municipalidad{
-
-        position: relative;
-        right: 20px;
-        transform: translateY(75%);
-        margin-bottom: 20px;
-
-     }
-     #libertad{
-
-        transform: translateY(170%);
-     }
 
 }
 
-
-
-@media only screen and (max-width: 490px){
-
-
-    #fh5co-trusted{
-        width: 75vw;
-        transform: translateX(10%);
-    }
-
-    .to-animate{
-
-        width: 200px;
-        position: relative;
-        transform: translateX(-180%);
-
-    }
-    #partes{
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        justify-content: center;
-        text-align: center;
-
-    }
-
-    .partner-logo{
-        margin-top: 20px;
-        height: 150px;
-      position: relative;
-      left: 50px;
-    }
-
-    #techo{
-        transform: translateX(-25%) translateY(-30%);
-    }
-
-    #Mivi{
-
-
-        transform: translateX(-30%)translateY(-25%);
-    }
-
-    #ministerio{
-        transform: translateX(-35%)translateY(-18%);
-
-        margin-top: 10px;
-
-
-    }
-    #municipalidad{
-        position: relative;
-        height: 150px;
-
-        transform: translateY(-40%) translateX(-85%);
-        margin-top: 40px;
-        margin-bottom:50px;
-
-
-    }
-
-    #libertad{
-        transform: translateX(10%) translateY(-30%);
-        margin-top: 40px;
-        height: 150px;
-    }
-}
 
 /* fin */
-
-
-
-
-
 

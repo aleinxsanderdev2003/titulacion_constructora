@@ -55,7 +55,7 @@ font-family: 'Orbitron', sans-serif;
 
         <section id="fh5co-trusted" data-section="trusted">
             <div class="fh5co-trusted">
-                <div class="container" >
+                <div class="container" id="Clientes-contenedor" >
                     <div class="row" id="animate">
                         <div class="col-md-12 section-heading text-center" id="to-animate">
                             <h2 class="to-animate text-center" style="
@@ -66,28 +66,28 @@ font-family: 'Orbitron', sans-serif;
                         </div>
                     </div>
                     <div class="row" id="partes">
-                         <div class="col-md-2 col-sm-3 col-xs-6 col-sm-offset-0 col-md-offset-1">
+                         <div class="col-md-2 col-sm-4 col-xs-6 col-sm-offset-0 col-md-offset-1 fotos-cliene">
                              <div class="partner-logo to-animate-2" id="techo">
                                  <img src="{{asset('img/techopropio.png')}}" alt="Partners" class="img-responsive" id="techoP">
                              </div>
                          </div>
-                        <div class="col-md-2 col-sm-3 col-xs-6">
+                        <div class="col-md-2 col-sm-4 col-xs-6 fotos-cliene">
                             <div class="partner-logo to-animate-2" id="Mivi">
                                 <img src="{{asset('img/vivienda.png')}}" alt="Partners" class="img-responsive" id="img-vivienda">
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-6" id="minis">
+                        <div class="col-md-2 col-sm-4 col-xs-6 fotos-cliene" id="minis">
                             <div class="partner-logo to-animate-2" id="ministerio">
                                 <img src="{{asset('img/ministerio.png')}}" alt="Partners" class="img-responsive"  >
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-6" id="muni">
+                        <div class="col-md-2 col-sm-4 col-xs-6 fotos-cliene" id="muni">
                             <div class="partner-logo to-animate-2" id="municipalidad">
                                 <img src="{{asset('img/municipalidad.png')}}" alt="Partners" class="img-responsive" >
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-12 col-xs-12" >
-                            <div class="partner-logo to-animate-3" id="libertad">
+                        <div class="col-md-2 col-sm-4 col-xs-6 " id="fotos-cliente" >
+                            <div class="partner-logo to-animate-2" id="libertad">
                                 <img src="{{asset('img/libertad.png')}}" alt="Partners" class="img-responsive">
                             </div>
                         </div>
