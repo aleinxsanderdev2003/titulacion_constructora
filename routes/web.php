@@ -21,8 +21,8 @@ use App\Http\Controllers\NoticiasContoller;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/inicio', [InicioController::class, 'pruebaindex'])->name('indexeado');
-Route::get('/', [InicioController::class, 'index'])->name('index');
+
+Route::get('/', [InicioController::class, 'pruebaindex'])->name('index');
 Route::get('/contacto' , [vistasController::class, 'contacto'])->name('contacto');
 Route::get('/nosotros' , [vistasController::class, 'nosotros'])->name('nosotros');
 

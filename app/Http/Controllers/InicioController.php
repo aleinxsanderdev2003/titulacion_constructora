@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class InicioController extends Controller
 {
     //
-    public function index(){
+    public function pruebaindex(){
         $proyectos = Proyecto::all();
 
-        return view('index', compact('proyectos'));
+        return view('inicio', compact('proyectos'));
     }
-    public function pruebaindex(){
+    public function index(){
 
 
         return view('inicio');
