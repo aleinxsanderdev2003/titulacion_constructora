@@ -172,36 +172,150 @@
                 /* Aplicar zoom */
             }
         }
-    </style>
+        <style>
+    .map-container {
+        position: relative;
+        overflow: hidden;
+    }
 
-    <section class="action text-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="left-text">
-                        <h1 class="font-weight-bold">Amet porro numquam ratione</h1>
-                        <p class="lead" style="font-family: 'Acme', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ut explicabo magni sapiente.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore at quia, vel in repellendus, cumque dolorem autem ad quidem mollitia porro blanditiis atque rerum debitis eveniet nostrum aliquam. Sint aperiam expedita sapiente amet officia quis perspiciatis adipisci, iure dolorem esse exercitationem!</p>
+    .map-container img {
+        border-radius: 20px;
+    }
+
+    .radar-pointer {
+        z-index: 1; /* Cambiado el z-index para que esté por encima de la imagen */
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        animation: radarAnimation 2s infinite linear;
+        cursor: pointer;
+        top: 40%; /* Centra verticalmente el radar en el contenedor */
+        left: 30%; /* Centra horizontalmente el radar en el contenedor */
+        transform: translate(-50%, -50%); /* Ajusta la posición del radar */
+    }
+
+    @keyframes radarAnimation {
+        0% {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.4;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+    }
+
+    .map-content {
+        margin-right: 50px; /* Ajusta el margen derecho */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start; /* Centra los círculos más a la izquierda */
+    }
+
+    .circle-container {
+        background-color: #ffc107;
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    .circle-container img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .circle-container p {
+        font-size: 14px;
+        margin-top: 8px;
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .map-content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circle-container {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+</style>
+
+<section class="action text-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="left-text">
+                    <h1 class="font-weight-bold">20 AÑOS DE EXPERIENCIA</h1>
+                    <p class="lead" style="font-family: 'Acme', sans-serif;">Lorem ipsum dolor sit amet,
+                         consectetur adipisicing elit. Nisi ut explicabo magni sapiente. Lorem ipsum dolor sit amet
+                          consectetur adipisicing elit. Magnam pariatur nihil fuga soluta voluptates alias eligendi
+                          possimus sit iure commodi excepturi cupiditate aliquid sint ut, reprehenderit ipsa veritatis
+                           quis maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nihil tempora
+                            repudiandae, vitae alias sapiente, quod accusamus
+                            iusto pariatur reprehenderit ullam nostrum autem eaque soluta dolorum error voluptas minima
+                             consequuntur!</p>
+               </div>
+               <br>
+                <div class="map-content">
+                    <div class="circle-container">
+                        <img src="{{asset('img/icon/construccion.png')}}" alt="">
+                        <p class="mt-2 text-white">Proyectos</p>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="right-image" style="background-image: url(../img/EMPRESA2.jpg);">
+                    <div class="circle-container">
+                        <img src="{{asset('img/icon/experiencia.png')}}" alt="">
+                        <p class="mt-2 text-white">20 años</p>
+                    </div>
+                    <div class="circle-container">
+                        <img src="{{asset('img/icon/socios.png')}}" alt="">
+                        <p class="mt-2 text-white">5 socios</p>
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 map-container">
+                <img class="img-fluid" src="{{asset('img/mapa.webp')}}" alt="">
+                <div class="radar-pointer"></div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
+
+        <!-- Agregando los círculos con iconos y texto -->
+ {{-- <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234046.42312408006!2d-78.53363878327158!3d-8.126712832235558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9052ae5dd3eabfb5%3A0x4e5f1251886f0dc7!2sLa%20Libertad!5e0!3m2!1ses!2spe!4v1708576045108!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            --}}
 
 
 
 
 
     {{-- Count Up --}}
-    <div id="gtco-counter" class="gtco-section" style="  background: linear-gradient(to right, #000000, #ffbf00);">
+    <div id="gtco-counter" class="gtco-section" style="background: #3C3B3F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ">
         <div class="gtco-container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                    <br>
                     <h2 class="cursive-font primary-color">Datos de la Constructora</h2>
                     <p class="text-white">Descubre algunos datos interesantes sobre nuestra empresa constructora.</p>
                 </div>
@@ -351,7 +465,7 @@
             </div>
         </div>
     </div>
-    
+
     {{-- cartas de noticias --}}
     <div class="titulo_noticias">
         <h1 class="search_title text-black" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif; text-align: center; ">NOTICIAS</h1>
