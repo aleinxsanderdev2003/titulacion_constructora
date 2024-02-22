@@ -12,5 +12,9 @@ class InicioController extends Controller
 
         return view('index', compact('proyectos'));
     }
+    public function pruebaindex(){
 
+
+        return view('inicio');
+    }
 }

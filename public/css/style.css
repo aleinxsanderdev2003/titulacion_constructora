@@ -278,25 +278,30 @@
 /***********
 10. Register
 ***********/
-
 .register
 {
 	width: 100%;
+    height: 800px;
     border-style: solid;
     margin-bottom: 30px;
 
 }
 
 
+#accordion-entero{
+    width: 300px;
+    height: 794px;
+}
+
+.accordion-body{
+    height: auto;
+}
 
 
-
-/acordion/
 .accordion {
-    width: 720px;
-    margin: 90px auto;
+    width: 100%;
+    margin: 0phppx auto;
     color: black;
-    background-color: white;
     padding: 45px 45px;
   }
 
@@ -307,7 +312,7 @@
 
   .accordion .label {
     position: relative;
-    padding: 10px 0;
+    padding: 10px ;
     font-size: 30px;
     color: black;
     cursor: pointer;
@@ -325,23 +330,22 @@
 
   .accordion .content4 {
     position: relative;
-    background: white;
     height: 0;
     font-size: 20px;
     text-align: justify;
-    width: 780px;
+    width: 100%;
     overflow: hidden;
     transition: 0.5s;
   }
 
   .accordion hr {
-    width: 100;
+    width: 100%;
     margin-left: 0;
     border: 1px solid grey;
   }
 
   .accordion .contenedor.active .content4 {
-    height: 150px;
+    height: 100px;
   }
 
   .accordion .contenedor.active .label::before {
@@ -349,8 +353,11 @@
     font-size: 30px;
   }
 
+  .col-md-6.nopadding .search_background {
+    background-image: url(https://qlu.ac.pa/wp-content/uploads/2023/04/ingeniero-civil-trabajador-construccion-arquitectos-que-usan-cascos-chalecos-seguridad-estan-trabajando-juntos-sitio-construccion-construyendo-casa-concepto-trabajo-equipo-cooperacion-scaled.jpg);
+    background-size: cover ;
 
-
+}
 
 /* muestra*/
 

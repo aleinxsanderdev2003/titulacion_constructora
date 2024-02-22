@@ -23,140 +23,68 @@
         <!-- Hero Slider -->
         <div class="hero_slider_container">
 
+            <!-- Navbar transparente -->
+
+            <nav class="navbar navbar-expand-lg navbar-light static-top" style="background-color: transparent;">
+                <!-- Ajusta el color de fondo y opacidad según tus preferencias -->
+
+                <a class="navbar-brand" href="#"><img class="navbar-icon img-fluid" src="img/EMPRESA.png" alt="" style="max-width: 150px;"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span>MENÚ</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route("index")}}"><i class="fas fa-home"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route("nosotros")}}"><i class="fas fa-users"></i> Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route("contacto")}}"><i class="fas fa-envelope"></i> Contáctanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hero Slides -->
             <div class="hero_slider owl-carousel">
 
-                <!-- Hero Slide -->
-                <div class="hero_slide">
-
-                    <div class="hero_slide_background" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(img/CN3.jpg)"></div>
-
-                    <nav class="navbar navbar-expand-lg navbar-light" style="  background: transparent;">
-                        <a class="navbar-brand" href="#"><img class="navbar-icon img-fluid" src="img/EMPRESA.png" alt="" style="max-width: 150px;"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span>MENÚ</span>
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("index")}}"><i class="fas fa-home"></i> Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("nosotros")}}"><i class="fas fa-users"></i> Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("techoPropio")}}"><i class="fas fa-home"></i> Techo Propio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("miVivienda")}}"><i class="fas fa-building"></i> Mi Vivienda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("contacto")}}"><i class="fas fa-envelope"></i> Contáctanos</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </nav>
+                <!-- Hero Slide 1 -->
+                <div class="hero_slide" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(img/CN3.jpg);">
                     <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                         <div class="hero_slide_content text-center">
-                            <h1 style="   font-family: 'Kanit', sans-serif;
-                            font-family: 'Orbitron', sans-serif;">Bienvenido a la Constructora</h1>
+                            <h1 style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Bienvenido a la Constructora</h1>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Slide -->
-                <div class="hero_slide">
-                    <div class="hero_slide_background" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1997&q=80)"></div>
-
-                    <nav class="navbar navbar-expand-lg navbar-light" style="  background: transparent;">
-                        <a class="navbar-brand" href="#"><img class="navbar-icon img-fluid" src="img/EMPRESA.png" alt="" style="max-width: 150px;"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span>MENÚ</span>
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <style>
-                            {
-                                color: #ffbf00;
-                            }
-                        </style>
-
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("index")}}"><i class="fas fa-home"></i> Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("nosotros")}}"><i class="fas fa-users"></i> Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("techoPropio")}}"><i class="fas fa-home"></i> Techo Propio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("miVivienda")}}"><i class="fas fa-building"></i> Mi Vivienda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a style="color: #ffbf00" class="nav-link" href="{{route("contacto")}}"><i class="fas fa-envelope"></i> Contáctanos</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </nav>
+                <!-- Hero Slide 2 -->
+                <div class="hero_slide" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1997&q=80);">
                     <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                         <div class="hero_slide_content text-center">
-                            <h1 style="   font-family: 'Kanit', sans-serif;
-                            font-family: 'Orbitron', sans-serif;">Edificaciones y Servicios Generales </h1>
+                            <h1 style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Edificaciones y Servicios Generales </h1>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Slide -->
-                <div class="hero_slide">
-                    <div class="hero_slide_background" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)"></div>
-
-                    <nav class="navbar navbar-expand-lg navbar-light" style="  background: transparent;">
-                        <a class="navbar-brand" href="#"><img class="navbar-icon img-fluid" src="img/EMPRESA.png" alt="" style="max-width: 150px;"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span>MENÚ</span>
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route("index")}}"><i class="fas fa-home"></i> Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route("nosotros")}}"><i class="fas fa-users"></i> Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route("techoPropio")}}"><i class="fas fa-home"></i> Techo Propio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route("miVivienda")}}"><i class="fas fa-building"></i> Mi Vivienda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route("contacto")}}"><i class="fas fa-envelope"></i> Contáctanos</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </nav>
+                <!-- Hero Slide 3 -->
+                <div class="hero_slide" style="background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);">
                     <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                         <div class="hero_slide_content text-center">
-                            <h1 style="   font-family: 'Kanit', sans-serif;
-                            font-family: 'Orbitron', sans-serif;">Contacta ya!</h1>
+                            <h1 style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif;">Contacta ya!</h1>
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            <!-- Botones de navegación -->
             <div class="hero_slider_left hero_slider_nav trans_200">
                 <span class="trans_200">
                     <i class="fas fa-chevron-left"></i>
                 </span>
             </div>
-
-            <!-- Botón de navegación derecha -->
             <div class="hero_slider_right hero_slider_nav trans_200">
                 <span class="trans_200">
                     <i class="fas fa-chevron-right"></i>
@@ -165,58 +93,7 @@
         </div>
     </div>
 
-    <style>
-        <style>
 
-        /* Estilo para los botones de navegación izquierda y derecha */
-        .hero_slider_nav {
-            background: #555;
-            color: white;
-            /* Cambia el color del icono */
-            border-radius: 50%;
-            /* Aplica un borde redondeado */
-            width: 40px;
-            /* Ajusta el ancho del botón según tu preferencia */
-            height: 40px;
-            /* Ajusta la altura del botón según tu preferencia */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            /* Agrega una transición suave */
-        }
-
-        /* Estilo para los botones de navegación cuando se pasa el cursor sobre ellos */
-        .hero_slider_nav:hover {
-            background-color: #555;
-            /* Cambia el color de fondo al pasar el cursor */
-        }
-    </style>
-    <style>
-        .hero_slide {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero_slide_background {
-            background-size: cover;
-            background-position: center;
-            animation: zoomAnimation 10s infinite alternate;
-            /* Animación de zoom infinita */
-        }
-
-        @keyframes zoomAnimation {
-            0% {
-                transform: scale(1);
-            }
-
-            100% {
-                transform: scale(1.1);
-                /* Aplicar zoom */
-            }
-        }
-    </style>
 
     <div class="hero_boxes">
         <div class="hero_boxes_inner">
@@ -263,6 +140,35 @@
     </div>
     </div>
 
+
+    <style>
+
+        /* Estilo para los botones de navegación izquierda y derecha */
+        .hero_slider_nav {
+            background: #555;
+            color: white;
+            /* Cambia el color del icono */
+            border-radius: 50%;
+            /* Aplica un borde redondeado */
+            width: 40px;
+            /* Ajusta el ancho del botón según tu preferencia */
+            height: 40px;
+            /* Ajusta la altura del botón según tu preferencia */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            /* Agrega una transición suave */
+        }
+
+        /* Estilo para los botones de navegación cuando se pasa el cursor sobre ellos */
+        .hero_slider_nav:hover {
+            background-color: #555;
+            /* Cambia el color de fondo al pasar el cursor */
+        }
+    </style>
+
     <div class="super_container">
 
         {{-- muestra --}}
@@ -300,6 +206,31 @@
                 border: 5px solid #fff;
             }
         </style>
+        <style>
+            .hero_slide {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero_slide_background {
+                background-size: cover;
+                background-position: center;
+                animation: zoomAnimation 10s infinite alternate;
+                /* Animación de zoom infinita */
+            }
+
+            @keyframes zoomAnimation {
+                0% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(1.1);
+                    /* Aplicar zoom */
+                }
+            }
+        </style>
+
         <section class="action text-center">
             <div class="container">
                 <div class="row align-items-center">
@@ -606,6 +537,9 @@
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
             <script src="https://kit.fontawesome.com/6b76d54a65.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
             @endsection
 
