@@ -19,6 +19,10 @@ class vistasController extends Controller
         return view("nosotros");
     }
 
+    public function loginUser(){
+        return view('user.auth.login');
+    }
+
 
 
 }

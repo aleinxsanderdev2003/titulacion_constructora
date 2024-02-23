@@ -49,11 +49,12 @@
                     <!-- menu start -->
                     <nav class="main-menu">
                         <ul>
-                            <li class="current-list-item"><a href="#">Inicio</a>
+                            <li class="current-list-item"><a href="{{route('index')}}">Inicio</a>
 
                             </li>
-                            <li><a href="about.html">Sobre Nosotros</a></li>
+                            <li><a href="{{route('nosotros')}}">Sobre Nosotros</a></li>
                             <li><a href="#">Proyectos</a>
+                                <li><a href="#">Programas</a>
                                 {{-- <ul class="sub-menu">
                                     <li><a href="cart.html"></a></li>
                                     <li><a href="checkout.html"></a></li>
@@ -62,7 +63,7 @@
                                     <li><a href="shop.html"></a></li>
                                 </ul> --}}
                             </li>
-                            <li><a href="news.html">Contacto</a>
+                            <li><a href="{{route('contacto')}}">Contacto</a>
 
                             </li>
 
