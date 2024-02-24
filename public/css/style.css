@@ -343,6 +343,30 @@
 
 }
 
+@media only screen and (min-width: 300px) and (max-width: 767px){
+
+    .register{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center ;
+    }
+    .row-eq-height{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center ;
+    }
+    #accordion-entero{
+        width: auto;
+    }
+    .accordion{
+        margin-top: 120px;
+    }
+    .contenedor .label{
+        font-size: 15px;
+    }
+}
 
 /* muestra*/
 

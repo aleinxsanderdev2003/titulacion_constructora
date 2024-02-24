@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main_styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}"> --}}
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">

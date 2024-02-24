@@ -263,7 +263,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <div class="left-text">
+                <div class="contenido-texto">
                     <h1 class="font-weight-bold">20 AÑOS DE EXPERIENCIA</h1>
                     <p class="lead" style="font-family: 'Acme', sans-serif;">Lorem ipsum dolor sit amet,
                          consectetur adipisicing elit. Nisi ut explicabo magni sapiente. Lorem ipsum dolor sit amet
