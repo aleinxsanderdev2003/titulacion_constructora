@@ -146,6 +146,7 @@
     }
 /* Fin */
 
+/* noticias */
 .left-block-container .image {
   height: 50%;
   width: 80%;
@@ -181,23 +182,31 @@
 .container-noticias {
   display: flex;
   justify-content: space-between;
-
+  /* align-items: center; */
   height: 900px;
-
-
-  
 }
+
+.separacion-gap{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    gap: 50px;
+}
+
 .titulo-noticias{
  left: 46%;
 
 
-  
+
 }
 
 .left-block, .right-block {
-  width: calc(50% - 10px); 
-  padding: 10px; 
-  box-sizing: border-box; 
+  width: calc(50% - 10px);
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .left-block {
@@ -206,9 +215,8 @@
   height: 600px;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  position: relative; 
-  top: 70px;
+  align-items: center;
+  position: relative;
   left: 3%;
 }
 
@@ -219,38 +227,37 @@
   margin: 5%;
   bottom: 2%;
   right: 2%;
+  gap: 20px;
 }
 
 .left-block-container {
-  width: 695px; 
-  height: 620px; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  background-color: #aaa; 
-  border-radius: 10%; 
-  position: relative; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  right: 11%;
+  width: 695px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aaa;
+  border-radius: 10%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .left-block-container img {
   position: absolute;
-  width: 100%; 
-  height: 100%; 
-  object-fit:fill; 
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
 }
 
 .right-block-container {
-  margin: 2px;
   display: flex;
   flex-wrap: wrap;
-  width: 45.33%;
+  width: 47%;
   height: 270px;
   border-radius: 10%;
   background-color: #aaa;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .right-block-container .details {
   display: flex;
@@ -259,14 +266,47 @@
   margin-top: 10px;
 }
 
+/* responsive noticias */
+@media only screen and (min-width: 600px) and (max-width: 1200px){
+ .container-noticias{
+  background-color: #F7971E;
+  width: auto;
+ }
+
+ .separacion-gap{
+  background-color: #07212e;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .right-block-container{
+  margin: 40px;
+  width: auto;
+ }
+
+ .right-block{
+  background-color: blueviolet;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-direction: column; */
+  transform: translateX( 10%);
+
+ }
+}
+
+
+/* fin responsive noticias*/
 
 
 /* Proyectos*/
 .contenedor-proyectos{
   margin: 3%;
 }
-
-
 
 .slide-container {
   width: 950px;
@@ -289,7 +329,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #fa7426;
- 
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Sombras añadidas */
 }
 .card .content:hover {
@@ -338,7 +378,6 @@
 
 
 
-  /* fin */
 
 
 
@@ -440,12 +479,7 @@
     font-size: 30px;
 
   }
-
-  .col-md-6.nopadding .search_background {
-    background-image: url(https://qlu.ac.pa/wp-content/uploads/2023/04/ingeniero-civil-trabajador-construccion-arquitectos-que-usan-cascos-chalecos-seguridad-estan-trabajando-juntos-sitio-construccion-construyendo-casa-concepto-trabajo-equipo-cooperacion-scaled.jpg);
-    background-size: cover ;
-
-}
+/* responsive el registro */
 
 @media only screen and (min-width: 300px) and (max-width: 767px){
 
@@ -469,121 +503,6 @@
     }
     .contenedor .label{
         font-size: 15px;
-    }
-}
-
-/* muestra*/
-
-.action {
-    background: #f2f2f2;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding: 50px 0;
-
-
-}
-#action-01{
-
-    position: relative;
-    left: 100px;
-
-}
-.action .left-text h4 {
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: 600px;
-    letter-spacing: 1px;
-    transform: translateX(15%);
-
-}
-.left-text{
-    transform: translateX(-25%);
-
-}
-
-.action .left-text p {
-    padding-top: 20px;
-}
-
-.action .left-text em {
-    font-size: 16px;
-    color: #aaa;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.action .right-image {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    top: 30px;
-    height: 80%;
-
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#fotos{
-    width: 450px;
-}
-
-.right-image{
-    transform: translateX(-5%);
-    width: 700px;
-
-}
-
-
-
-@media (max-width: 980px) {
-
-    .action .right-image {
-        padding: 20px;
-        text-align: center;
-
-
-    }
-
-    .left-text h4{
-        position: relative;
-        right: 50px;
-
-    }
-    #action-01{
-
-        width: 800px;
-    }
-
-    #fotos{
-        position: relative;
-        height: 200px;
-        width: 350px;
-        top: 70px;
-
-        transform: translateX(-20%);
-
-    }
-
-}
-
-
-@media (max-width: 760px) {
-
-    .left-text {
-        position: relative;
-        left: 40px;
-    }
-
-    #fotos{
-        position: relative;
-        height: 200px;
-        width: 350px;
-        top: -10px;
-
-
-
-        transform: translateX(-1%);
-
     }
 }
 
@@ -702,8 +621,6 @@
     vertical-align: middle;
   }
 
-
-
 /* fin */
 
 
@@ -711,7 +628,6 @@
 /*********************************
 11.1 Search Form
 *********************************/
-
 .search_form
 {
     height: 500px;
@@ -762,114 +678,8 @@ input:last-of-type
 {
 	outline: solid 2px #FFFFFF;
 }
-
-/* proyectos */
-
-.gallery .all{
-    color: black;
-
-}
-.gallery{
-    padding: 80px 0px;
+/* fin */
 
 
-}
-
-.gallery img{
-    width: 100%;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgb(250, 247, 247);
-}
-
-#gallery-popup .modal-img{
-    width: 100%;
-
-}
-p{
-    color: var(--letras);
-    text-align: center;
-
-}
-
-
-#galerias{
-    cursor: pointer;
-
-}
-
-
-.all{
-
-    display: inline;
-    padding: 5px 15px;
-
-
-}
-
-
-/*  Call to Action Start*/
-
-
-.section-space-padding {
-    padding: 100px 0px;
-}
-.button {
-	border: none;
-	border-radius: 5px;
-	font-family: inherit;
-	font-size: 17px;
-	color: inherit;
-	background: none;
-	cursor: pointer;
-	padding: 20px 60px;
-	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.button:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.button-style {
-	border: 3px solid #fff;
-	color: #fff;
-}
-
-.button-style:hover,
-.button-style:active,
-.button-style:focus {
-	color: #ffffff;
-	background: #4c9cef;
-}
-
-.button-style-color-2:hover,
-.button-style-color-2:active,
-.button-style-color-2:focus {
-	color: #ffffff;
-	background: #f7639a !important;
-}
-
-.button-style-dark {
-	border: 3px solid #000000;
-	color: #000000;
-}
-
-
-
-
-/* 
- /* fin */
 
 

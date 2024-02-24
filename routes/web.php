@@ -54,6 +54,6 @@ Route::get('/noticias', [NoticiasContoller::class, 'index'])->name('noticias.ind
 //Route::get('/noticias/create', [NoticiasController::class, 'create'])->name('noticias.create');
 Route::post('/noticias', [NoticiasContoller::class, 'store'])->name('noticias.store');
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

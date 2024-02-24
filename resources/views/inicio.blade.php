@@ -59,13 +59,7 @@
                                 <li><a href="{{route('nosotros')}}">Sobre Nosotros</a></li>
                                 <li><a href="#">Proyectos</a>
                                 <li><a href="#">Programas</a>
-                                    {{-- <ul class="sub-menu">
-                                    <li><a href="cart.html"></a></li>
-                                    <li><a href="checkout.html"></a></li>
-                                    <li><a href="contact.html"></a></li>
-                                    <li><a href="news.html"></a></li>
-                                    <li><a href="shop.html"></a></li>
-                                </ul> --}}
+
                                 </li>
                                 <li><a href="{{route('contacto')}}">Contacto</a>
 
@@ -79,10 +73,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    {{-- <div class="header-icons">
-                                    <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                                    <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-                                </div> --}}
+
                                 </li>
                             </ul>
                         </nav>
@@ -178,7 +169,7 @@
                 }
             }
 
-            <style>.map-container {
+            .map-container {
                 position: relative;
                 overflow: hidden;
             }
@@ -312,18 +303,7 @@
         </section>
 
 
-        <!-- Agregando los círculos con iconos y texto -->
-        {{-- <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234046.42312408006!2d-78.53363878327158!3d-8.126712832235558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9052ae5dd3eabfb5%3A0x4e5f1251886f0dc7!2sLa%20Libertad!5e0!3m2!1ses!2spe!4v1708576045108!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            --}}
     </div>
-
-
-
-
-
-
-
 
 
 
@@ -503,68 +483,76 @@
     </script>
 
     <div class="container-noticias">
-        <div class="titulo-noticias">
-            <h1 class="search_title text-black" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif; right:78px;">NOTICIAS</h1>
-        </div>
-        <div class="left-block">
-            <div class="left-block-container">
-                <div class="image">
-                </div>
-                <div class="details">
-                    <span class="name"></span>
-                    <span class="description">
-                        </span>
-                </div>
-            </div>
-        </div>
-        <div class="right-block">
-            <div class="right-block-container">
-                <div class="image">
-                </div>
-                <div class="details">
-                    <span class="name">OBRA 9</span>
-                    <span class="description"> iusto officiis! Odit corporis quibusdam tempora esse,
-                        facilis veniam
-                        voluptate nemo totam assumenda!</span>
-                </div>
-            </div>
-            <div class="right-block-container">
-                <div class="image">
 
-                </div>
-                <div class="details">
-                    <span class="name">OBRA 9</span>
-                    <span class="description">nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                        facilis veniam
-                        voluptate nemo totam assumenda!</span>
-                </div>
-            </div>
-            <div class="right-block-container">
-                <div class="image">
+        <div class="contenedor-completo">
 
-                </div>
-                <div class="details">
-                    <span class="name">OBRA 9</span>
-                    <span class="description">officiis! Odit corporis quibusdam tempora esse,
-                        facilis veniam
-                        voluptate nemo totam assumenda!</span>
-                </div>
+            <div class="titulo-noticias">
+                <h1 class="search_title text-black" style="font-family: 'Kanit', sans-serif; font-family: 'Orbitron', sans-serif; right:78px;">NOTICIAS</h1>
             </div>
-            <div class="right-block-container">
-                <div class="image">
 
+            <div class="separacion-gap">
+
+                <div class="left-block">
+                    <div class="left-block-container">
+                        <div class="image">
+                        </div>
+                        <div class="details">
+                            <span class="name"></span>
+                            <span class="description">
+                                </span>
+                        </div>
+                    </div>
                 </div>
-                <div class="details">
-                    <span class="name">OBRA 9</span>
-                    <span class="description">iusto officiis! Odit corporis quibusdam tempora esse,
-                        facilis veniam
-                        voluptate nemo totam assumenda!</span>
+                <div class="right-block">
+                    <div class="right-block-container">
+                        <div class="image">
+                        </div>
+                        <div class="details">
+                            <span class="name">OBRA 9</span>
+                            <span class="description"> iusto officiis! Odit corporis quibusdam tempora esse,
+                                facilis veniam
+                                voluptate nemo totam assumenda!</span>
+                        </div>
+                    </div>
+                    <div class="right-block-container">
+                        <div class="image">
+
+                        </div>
+                        <div class="details">
+                            <span class="name">OBRA 9</span>
+                            <span class="description">nisi iusto officiis! Odit corporis quibusdam tempora esse,
+                                facilis veniam
+                                voluptate nemo totam assumenda!</span>
+                        </div>
+                    </div>
+                    <div class="right-block-container">
+                        <div class="image">
+
+                        </div>
+                        <div class="details">
+                            <span class="name">OBRA 9</span>
+                            <span class="description">officiis! Odit corporis quibusdam tempora esse,
+                                facilis veniam
+                                voluptate nemo totam assumenda!</span>
+                        </div>
+                    </div>
+                    <div class="right-block-container">
+                        <div class="image">
+
+                        </div>
+                        <div class="details">
+                            <span class="name">OBRA 9</span>
+                            <span class="description">iusto officiis! Odit corporis quibusdam tempora esse,
+                                facilis veniam
+                                voluptate nemo totam assumenda!</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
     </div>
-
-
 
     <!-- Register -->
     <div class="register">
@@ -650,12 +638,6 @@
 
 
     {{-- fin --}}
-
-
-
-
-
-
 
 
 
