@@ -40,6 +40,8 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 Route::get('/IniciarSesion', [vistasController::class, 'loginUser'])->name('loginUser');
+Route::get('/Registrarse', [vistasController::class, 'registerUser'])->name('registerUser');
+
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 // Ruta para la vista de presentación
 Route::get('/admin', [AdminController::class,'welcome'])->name('admin.welcome');

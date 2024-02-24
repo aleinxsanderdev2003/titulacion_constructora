@@ -22,7 +22,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Phudu&display=swap" rel="stylesheet">
     <title>CN constructora</title>
     <link rel="icon" href="{{asset('img/EMPRESA.png')}}">
-
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 

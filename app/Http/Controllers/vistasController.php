@@ -23,6 +23,12 @@ class vistasController extends Controller
         return view('user.auth.login');
     }
 
+    public function registerUser(){
+        return view('user.auth.register');
+    }
+
+
+
 
 
 }
