@@ -56,31 +56,22 @@
                             </li>
                             <li><a href="{{route('nosotros')}}">Sobre Nosotros</a></li>
                             <li><a href="#">Proyectos</a>
-                                <li><a href="#">Programas</a>
-                                {{-- <ul class="sub-menu">
-                                    <li><a href="cart.html"></a></li>
-                                    <li><a href="checkout.html"></a></li>
-                                    <li><a href="contact.html"></a></li>
-                                    <li><a href="news.html"></a></li>
-                                    <li><a href="shop.html"></a></li>
-                                </ul> --}}
+                            <li><a href="#">Programas</a>
+
                             </li>
                             <li><a href="{{route('contacto')}}">Contacto</a>
 
                             </li>
 
-                            <li><a href="shop.html">Entrar</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop.html">Iniciar Sesión</a></li>
-                                    <li><a href="checkout.html">Registrarse</a></li>
+                        <li><a href="">Entrar</a>
+                            <ul class="sub-menu">
+                                <li><a href="{{route('loginUser')}}">Iniciar Sesión</a></li>
+                                <li><a href="{{route('registerUser')}}">Registrarse</a></li>
 
                                 </ul>
                             </li>
                             <li>
-                                {{-- <div class="header-icons">
-                                    <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                                    <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-                                </div> --}}
+
                             </li>
                         </ul>
                     </nav>
