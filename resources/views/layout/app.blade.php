@@ -156,13 +156,56 @@ $(document).ready(function() {
         </style>
         {{-- fin --}}
 
-        <div class="whatsapp-button">
+        {{-- <div class="whatsapp-button">
             <a href="https://wa.me/1234567890" target="_blank">
                 <div class="whatsapp-icon">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp Icon">
                 </div>
             </a>
+        </div> --}}
+        <div class="whatsapp-button">
+            <a href="#" onclick="toggleChat(event)">
+                <div class="whatsapp-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                </div>
+            </a>
         </div>
+
+        <div id="chat-container">
+            <div id="chat-header">Chat con JhonatanBot</div>
+            <iframe id="chat-iframe" src='https://webchat.botframework.com/embed/CNBot-bot?s=dd47gV6ft3I.xVUrKfOT_UrS7PAq5Xb9E57tEFm1lsorLHsdSk7iGhY' style='min-width: 400px; width: 100%; min-height: 500px;background: #ffcccc;'></iframe>
+        </div>
+
+
+        <style>
+            #chat-container {
+              display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 120px; /* Ajusta este valor para mover el iframe más a la izquierda */
+              border-radius: 10px;
+              overflow: hidden;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              transition: display 0.3s ease-in-out;
+              z-index: 9999; /* Valor alto para superponerse a otros elementos */
+
+          }
+
+          #chat-header {
+              background-color: #25D366; /* Color de fondo de WhatsApp */
+              color: #fff; /* Color del texto */
+              padding: 10px;
+              text-align: center;
+              font-weight: bold;
+          }
+
+          #chat-iframe {
+              width: 100%;
+              height: calc(100% - 40px); /* Resta el tamaño del encabezado */
+              border: none;
+              background-color: #f0f0f0; /* Color de fondo del iframe */
+          }
+          </style>
 
         <style>
 
@@ -234,6 +277,16 @@ $(document).ready(function() {
         <small id="pie">&copy; 2023 <b>CN Constructora</b> - Todos los Derechos Reservados.</small>
     </div>
 </footer>
+
+
+{{-- bot --}}
+<script>
+    function toggleChat(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            var chatContainer = document.getElementById('chat-container');
+            chatContainer.style.display = (chatContainer.style.display === 'none' || chatContainer.style.display === '') ? 'block' : 'none';
+    }
+</script>
 
 
 
