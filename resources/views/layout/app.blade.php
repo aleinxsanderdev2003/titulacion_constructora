@@ -138,8 +138,7 @@ $(document).ready(function() {
         </div>
         <style>
             /* Estilo para cambiar el color de fondo al pasar el mouse */
-/* Estilo para cambiar el color de fondo a negro al pasar el mouse */
-/* Estilo para aplicar el filtro de desaturación al pasar el mouse */
+
 /* Estilo para aplicar el filtro de desaturación (blanco y negro) al inicio */
 .partner-logo img {
     filter: grayscale(100%);
@@ -150,65 +149,95 @@ $(document).ready(function() {
 .partner-logo:hover img {
     filter: none; /* Quita el filtro, muestra la imagen a todo color al pasar el mouse */
 }
+       </style>
 
-
-
-        </style>
-        {{-- fin --}}
-
-        {{-- <div class="whatsapp-button">
-            <a href="https://wa.me/1234567890" target="_blank">
-                <div class="whatsapp-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp Icon">
-                </div>
-            </a>
-        </div> --}}
-        <div class="whatsapp-button">
-            <a href="#" onclick="toggleChat(event)">
-                <div class="whatsapp-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp Icon">
-                </div>
-            </a>
+<div class="whatsapp-button">
+    <a href="https://wa.me/51901287605" target="blank" onclick="toggleWhatsapp(event)">
+        <div class="whatsapp-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp Icon">
         </div>
+    </a>
+</div>
 
-        <div id="chat-container">
-            <div id="chat-header">Chat con JhonatanBot</div>
-            <iframe id="chat-iframe" src='https://webchat.botframework.com/embed/CNBot-bot?s=dd47gV6ft3I.xVUrKfOT_UrS7PAq5Xb9E57tEFm1lsorLHsdSk7iGhY' style='min-width: 400px; width: 100%; min-height: 500px;background: #ffcccc;'></iframe>
+<div class="chatbot-button">
+    <a href="#" onclick="toggleChatbot(event)">
+        <div class="chatbot-icon">
+            <!-- Add your chatbot icon image here -->
+            <img src="https://cdn-icons-png.flaticon.com/512/4616/4616304.png" alt="Chatbot Icon">
         </div>
+    </a>
+</div>
 
+<div id="chat-container">
+    <div id="chat-header">Chat con JhonatanBot</div>
+    <iframe id="chat-iframe" src='https://webchat.botframework.com/embed/CNBot-bot?s=dd47gV6ft3I.xVUrKfOT_UrS7PAq5Xb9E57tEFm1lsorLHsdSk7iGhY' style='min-width: 400px; width: 100%; min-height: 500px;background: #ffcccc;'></iframe>
+</div>
+<script>
+    function toggleChatbot(event) {
+        event.preventDefault();
+        var chatContainer = document.getElementById('chat-container');
+        chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
+    }
 
-        <style>
-            #chat-container {
-              display: none;
-              position: fixed;
-              bottom: 20px;
-              right: 120px; /* Ajusta este valor para mover el iframe más a la izquierda */
-              border-radius: 10px;
-              overflow: hidden;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-              transition: display 0.3s ease-in-out;
-              z-index: 9999; /* Valor alto para superponerse a otros elementos */
+    function toggleWhatsapp(event) {
+        // Add your WhatsApp toggle logic here
+    }
+</script>
+<style>
+    #chat-container {
+        display: none;
+        position: fixed;
+        bottom: 90px;
+        right: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: display 0.3s ease-in-out;
+        z-index: 9999;
+    }
 
-          }
+    #chat-header {
+        background-color: #25D366;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
 
-          #chat-header {
-              background-color: #25D366; /* Color de fondo de WhatsApp */
-              color: #fff; /* Color del texto */
-              padding: 10px;
-              text-align: center;
-              font-weight: bold;
-          }
+    #chat-iframe {
+        width: 100%;
+        height: calc(100% - 40px);
+        border: none;
+        background-color: #f0f0f0;
+    }
 
-          #chat-iframe {
-              width: 100%;
-              height: calc(100% - 40px); /* Resta el tamaño del encabezado */
-              border: none;
-              background-color: #f0f0f0; /* Color de fondo del iframe */
-          }
-          </style>
+    .chatbot-button {
+        position: fixed;
+        bottom: 30px;
+        right: 100px; /* Adjust this value as needed */
+        width: 60px;
+        height: 60px;
+        background-color: #4285f4; /* Change the color as needed */
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        animation: radar 2s linear infinite;
+        z-index: 999;
+    }
 
-        <style>
+    .chatbot-icon {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .chatbot-icon img {
+        width: 40px;
+        height: 40px;
+    }
+</style>
+<style>
 .whatsapp-button {
     position: fixed;
     bottom: 30px;
