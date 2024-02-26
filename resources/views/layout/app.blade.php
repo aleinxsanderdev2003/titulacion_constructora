@@ -179,9 +179,7 @@ $(document).ready(function() {
         chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
     }
 
-    function toggleWhatsapp(event) {
-        // Add your WhatsApp toggle logic here
-    }
+
 </script>
 <style>
     #chat-container {
