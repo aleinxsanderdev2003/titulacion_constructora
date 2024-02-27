@@ -179,7 +179,9 @@ $(document).ready(function() {
         chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
     }
 
-
+    function toggleWhatsapp(event) {
+        // Add your WhatsApp toggle logic here
+    }
 </script>
 <style>
     #chat-container {
@@ -287,8 +289,7 @@ $(document).ready(function() {
         </div>
         <div class="box">
             <h2>SOBRE NOSOTROS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+            <p>CN Edificaciones es más que una empresa constructora, somos tu aliado estratégico para convertir tus ideas en proyectos tangibles. Con una amplia experiencia en el sector, te ofrecemos un servicio integral que abarca desde la asesoría personalizada hasta la ejecución final de tu proyecto.</p>
         </div>
         <div class="box">
             <h2>SIGUENOS</h2>

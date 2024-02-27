@@ -10,6 +10,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProyectoController;
 
 use App\Http\Controllers\NoticiasContoller;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,11 @@ Route::get('/admin', [AdminController::class,'welcome'])->name('admin.welcome');
 Route::get('/techo-propio', [TechoPropioController::class, 'mostrar'])->name('techoPropio');
 Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVivienda');
 
+
+
+
+
+Route::get('/usuario', [UsuarioController::class,'UsuarioIndex'])->name('user.UsuarioIndex');
 
 
 //

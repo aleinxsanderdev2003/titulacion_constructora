@@ -55,13 +55,7 @@
                             <li><a href="{{route('nosotros')}}">Sobre Nosotros</a></li>
                             <li><a href="#">Proyectos</a>
                                 <li><a href="#">Programas</a>
-                                {{-- <ul class="sub-menu">
-                                    <li><a href="cart.html"></a></li>
-                                    <li><a href="checkout.html"></a></li>
-                                    <li><a href="contact.html"></a></li>
-                                    <li><a href="news.html"></a></li>
-                                    <li><a href="shop.html"></a></li>
-                                </ul> --}}
+
                             </li>
                             <li><a href="{{route('contacto')}}">Contacto</a>
 
@@ -75,10 +69,6 @@
                                 </ul>
                             </li>
                             <li>
-                                {{-- <div class="header-icons">
-                                    <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                                    <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-                                </div> --}}
                             </li>
                         </ul>
                     </nav>
@@ -107,8 +97,8 @@
             <img src="img/EMPRESA.png" alt="Logo de la empresa" class="img-fluid mb-3" />
 
             <h2  style="  font-family: 'Kanit', sans-serif;
-            font-family: 'Orbitron', sans-serif;">Nuestra Historia</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod libero eu augue ultrices, in consequat dolor faucibus. Nullam scelerisque turpis vel magna semper, eget eleifend orci interdum.</p>
+            font-family: 'Orbitron', sans-serif;">¿Quienes somos?</h2>
+            <p>CN Edificaciones y Servicios Generales es una empresa de diseño, Implementacion y Construccion de proyectos de Ingenieria,Arquitectura, que basa su experiencia en sus profesionales altamente capacitados, abocados a brindar un Servicio de alta calidad</p>
         </div>
         <div class="col-md-6">
             <div class="mission-vision">
@@ -116,7 +106,7 @@
                     <i class="fas fa-bullseye fa-3x"></i> <!-- Icono de Font Awesome para Misión -->
                     <h2 class="texto-degradado" style="  font-family: 'Kanit', sans-serif;
                     font-family: 'Orbitron', sans-serif; color: linear-gradient(to right, #fe8c00, #fbac01)">Nuestra Misión</h2>
-                    <p>Ser la constructora líder en calidad y satisfacción del cliente, entregando proyectos innovadores y sostenibles.</p>
+                    <p>Nuestra Mision principal es coadyuvar al desarrollo de nuestros clientes a traves de la presentacion de Servicios con altos estandares de calidad, Profesionalismo y puntualidad</p>
                 </div>
 
                 <div>

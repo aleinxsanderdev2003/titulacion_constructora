@@ -268,15 +268,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="contenido-texto">
-                            <h1 class="font-weight-bold">20 AÑOS DE EXPERIENCIA</h1>
-                            <p class="lead" style="font-family: 'Acme', sans-serif;">Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit. Nisi ut explicabo magni sapiente. Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Magnam pariatur nihil fuga soluta voluptates alias eligendi
-                                possimus sit iure commodi excepturi cupiditate aliquid sint ut, reprehenderit ipsa veritatis
-                                quis maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nihil tempora
-                                repudiandae, vitae alias sapiente, quod accusamus
-                                iusto pariatur reprehenderit ullam nostrum autem eaque soluta dolorum error voluptas minima
-                                consequuntur!</p>
+                            <h1 class="font-weight-bold">08 AÑOS DE EXPERIENCIA</h1>
+                            <p class="lead" style="font-family: 'Acme', sans-serif;">En CN Edificaciones y Servicios Generales, nos especializamos en el desarrollo integral de proyectos de construcción, brindando asesoramiento y apoyo a aquellas personas que desean construir con el Fondo Mi Vivienda. Con más de 8 años de experiencia, nuestro equipo altamente capacitado se dedica a proporcionar soluciones integrales y de alta calidad, asegurando que cada proyecto se desarrolle de manera exitosa y cumpla con las expectativas de nuestros clientes que buscan hacer realidad su hogar con el respaldo del Fondo Mi Vivienda.</p>
                         </div>
                         <br>
                         <div class="map-content">
@@ -286,7 +279,7 @@
                             </div>
                             <div class="circle-container">
                                 <img src="{{asset('img/icon/experiencia.png')}}" alt="">
-                                <p class="mt-2 text-white">20 años</p>
+                                <p class="mt-2 text-white">08 años</p>
                             </div>
                             <div class="circle-container">
                                 <img src="{{asset('img/icon/socios.png')}}" alt="">
@@ -315,143 +308,107 @@
             <div class="swiper-wrapper card-wrapper">
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_1">
                         </div>
                         <div class="details">
                             <span class="name">OBRA 1</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Fondo Mivivienda: Creación de un hogar en la calle Pedro Gavilán, La Libertad, Perú, con coordenadas geográficas precisas (8.2197°S, 78.9724°W, altitud 5.8m). La construcción está programada para comenzar el 10 de Enero de 2023. </span>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_2">
 
                         </div>
                         <div class="details">
                             <span class="name">OBRA 2</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Fondo Mivivienda: Creación de un hogar en la calle gnacio Merino, Pacasmayo, Perú, con coordenadas geográficas  (-7.40472114, -79.56681867, altitud 21 Metros). Fecha de culminacion el 9 de febrero de 2023.</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_3">
 
                         </div>
                         <div class="details">
                             <span class="name">OBRA 3</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Techo propio: Creación de un hogar en, Jayanca 14150, Perú, con coordenadas geográficas precisas (-6.3827306°, -79.8162742°, altitud 63 metros).  La construccion culmino  el 25 febrero de 2023.</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_4">
 
                         </div>
                         <div class="details">
                             <span class="name">OBRA 4</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Techo Propio: Construccion de vivienda en calle Flores de la Paz,Guadalupe,Perú. Las coordenadas geográficas (Altitud -7.2333°, Longitud -79.4667°), con una altitud de 75 metros. Fecha lunes 15 de mayo de 2023</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_5">
 
                         </div>
                         <div class="details">
                             <span class="name">OBRA 5</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Fondo Mivivienda: Creación de un hogar en la calle gnacio Merino, Pacasmayo, Perú, con coordenadas geográficas precisas (-6.486984972444642°, -79.90562585809961°, altitud 42 metros). Fecha de culminacion el 20 febrero de 2023.</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_6">
 
                         </div>
                         <div class="details">
                             <span class="name">OBRA 6</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Techo Propio: Construcción de vivienda en La Tucume Viejo, Chiclayo ubicada en las coordenadas geográficas (Altitud -6.486584540760709°, Longitud -79.9045587775454°) y a una altitud de 69 metros. fecha   1 de marzo de 2023.</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_7">
 
                         </div>
                         <div class="details">
                             <span class="name">OBRA 7</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Mi Vivienda: Construcción de hogares en Chimbote, Perú, en la calle Los Jazmines. Las coordenadas geográficas(-9.0857°, -78.5865°, altitud de 15 metros). La fecha estimada de conclusión es el 10 de marzo de 2023.</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_8">
 
                         </div>
                         <div class="details">
                             <span class="name">OBRA 8</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Techo Propio: Construcción de viviendas en Chepén, Perú, en la Calle Libertad. Las coordenadas geográficas(-7.2235°, -79.4489°), altitud de 42 metros . La fecha estimada de conclusión es el 10 de agosto de 2023.</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide card">
                     <div class="content">
-                        <div class="image">
+                        <div class="image image_9">
 
                         </div>
                         <div class="details">
                             <span class="name">OBRA 9</span>
-                            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-                                quidem necessitatibus ut
-                                ex tenetur tempora unde nisi iusto officiis! Odit corporis quibusdam tempora esse,
-                                facilis veniam
-                                voluptate nemo totam assumenda!</span>
+                            <span class="description">Proyecto Techo Propio: Construcción de viviendas en Pacanguilla, Perú, en la Avenida El Mirador. Las coordenadas geográficas(-7.2059°, -79.5015°), altitud de 60 metros. La fecha estimada de conclusión es el 15 de septiembre de 2023.</span>
                         </div>
                     </div>
                 </div>
@@ -565,28 +522,28 @@
                             <h1 class="my-title">Preguntas Frecuentes</h1>
                             <hr>
                             <div class="contenedor">
-                                <div class="label">¿Cómo podemos ayudar?</div>
-                                <div class="content4">Adquiriendo los productos de nuestros artesanos peruanos, la mejor manera de avanzar es ser solidarios con quienes no pueden ayudarse a sí mismos. Solo comunícate a nuestros números, o envíanos un mensaje al WhatsApp.</div>
+                                <div class="label">¿Los convivientes pueden acceder al Programa Techo Propio?</div>
+                                <div class="content4">Sí. Si tú y tu pareja llevan juntos más de dos años continuos y no tienen impedimento para casarse podrán participar en el Programa Techo Propio. Para ello ambos deben de acercarse a las oficinas del Fondo MIVIVIENDA e inscribirse en el programa.</div>
                             </div>
                             <hr>
                             <div class="contenedor">
                                 <div class="label">¿Tiene un costo adicional?</div>
-                                <div class="content4">Ninguno, nosotros pasamos a su casa.</div>
+                                <div class="content4">Ninguno, nosotros Realizamos todo el papelo totalmente gratis.</div>
                             </div>
                             <hr>
                             <div class="contenedor">
-                                <div class="label">¿Comprar para su negocio o empresa?</div>
-                                <div class="content4">Nosotros contamos con los documentos necesarios para validar su compra como empresario y negociante. Estamos aptos para la recepción de sus compras bajo requisitos legales a nivel nacional.</div>
+                                <div class="label">¿Cuál es el Beneficio del Programa Techo Propio?</div>
+                                <div class="content4">El beneficio principal del programa es el Bono Familiar Habitacional (BFH) subsidio otorgado por una sola vez a los beneficiarios, sin cargo de restitución y que constituye un incentivo y complemento de su ahorro y de su esfuerzo constructor.</div>
                             </div>
                             <hr>
                             <div class="contenedor">
-                                <div class="label">¿Puedo comprar con efectivo o tarjeta?</div>
-                                <div class="content4">Recibimos cualquier tipo de pago, depósitos, etc. Gracias por su compra, ayudará a un artesano peruano.</div>
+                                <div class="label">¿Qué debo hacer para postular al programa Techo Propio?</div>
+                                <div class="content4">Si cumples con los requisitos para la modalidad a la que desea postular puedes acercarte a nuestras Oficinas a nivel nacional o Centros Autorizados con la finalidad de solicitar su inscripción.</div>
                             </div>
                             <hr>
                             <div class="contenedor">
-                                <div class="label">¿Puedo comprar con efectivo o tarjeta?</div>
-                                <div class="content4">Recibimos cualquier tipo de pago, depósitos, etc. Gracias por su compra, ayudará a un artesano peruano.</div>
+                                <div class="label">¿¿El Fondo MIVIVIENDA o el Programa TECHO PROPIO sortean viviendas?</div>
+                                <div class="content4">A través del Programa Techo Propio NO se sortean viviendas. El Bono Familiar Habitacional, destinado para la adquisición de viviendas, se otorga en función al cumplimiento de los requisitos establecidos en la normativa correspondiente.</div>
                             </div>
                             <hr>
                         </div>
