@@ -34,30 +34,36 @@
                         <div class="row g-0">
                             <div class="col-md-6">
                                 <div class="card-body p-4 p-lg-5 text-black">
-                                    <form class="d-flex flex-column align-items-center">
+                                    <form action="{{ route('register') }}" method="post" class="d-flex flex-column align-items-center">
+                                        @csrf
                                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Regístrate</h5>
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form2Example17" class="form-control form-control-lg" />
+                                            <input type="text" id="form2Example17" name="nombres" class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example17">Nombres</label>
+                                            @error('nombres')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                         </div>
+
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form2Example17" class="form-control form-control-lg" />
+                                            <input type="text" id="form2Example17" name="apellidos" class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example17">Apellidos</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                                            <input type="email" id="form2Example17" name="email" class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example17">Correo electrónico</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                                            <input type="password" id="form2Example27" name="password" class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example27">Contraseña</label>
                                         </div>
                                         <div class="pt-1 mb-4">
-                                            <button class="btn btn-dark btn-lg btn-block" type="button">REGISTRARSE</button>
+                                            <button class="btn btn-dark btn-lg btn-block" type="submit">REGISTRARSE</button>
                                         </div>
                                         <a class="small text-muted" href="#!">¿Olvidaste tu contraseña?</a>
                                         <p class="mb-5 pb-lg-2" style="color: #393f81;">¿Ya tienes una cuenta? <a href="{{route('loginUser')}}" style="color: #393f81;">Iniciar sesión aquí</a></p>
                                     </form>
+
                                 </div>
                             </div>
                             <div class="col-md-6 d-flex align-items-center">

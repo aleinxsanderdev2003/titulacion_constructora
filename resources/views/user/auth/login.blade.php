@@ -34,7 +34,7 @@
                         <div class="row g-0">
                             <div class="col-md-12">
                                 <div class="card-body p-4 p-lg-5 text-black">
-                                    <form class="d-flex flex-column align-items-center">
+                                    <form action="{{ route('login') }}" method="post" class="d-flex flex-column align-items-center">
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <span class="h1 fw-bold mb-0 text-center"><img width="45%" src="{{asset('img/EMPRESA.png')}}" class="img-fluid" alt=""></span>
                                         </div>

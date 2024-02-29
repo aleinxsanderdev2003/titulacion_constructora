@@ -11,6 +11,8 @@ use App\Http\Controllers\ProyectoController;
 
 use App\Http\Controllers\NoticiasContoller;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\ClienteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +56,8 @@ Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVi
 
 
 Route::get('/usuario', [UsuarioController::class,'UsuarioIndex'])->name('user.UsuarioIndex');
-
+Route::post('/register', [ClienteController::class, 'register'])->name('register');
+Route::post('/login', [ClienteController::class, 'login'])->name('login');
 
 //
 

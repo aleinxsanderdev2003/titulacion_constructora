@@ -68,7 +68,7 @@
                                 <li><a href="shop.html">Entrar</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{route('loginUser')}}">Iniciar Sesión</a></li>
-                                        <li><a href="checkout.html">Registrarse</a></li>
+                                        <li><a href="{{route('registerUser')}}">Registrarse</a></li>
 
                                     </ul>
                                 </li>
