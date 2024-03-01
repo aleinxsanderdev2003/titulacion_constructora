@@ -27,6 +27,13 @@ class vistasController extends Controller
         return view('user.auth.register');
     }
 
+    public function forgotPass(){
+        return view('user.auth.forgot_password');
+    }
+
+    public function mainUser(){
+        return view('user.dashboard.main');
+    }
 
 
 

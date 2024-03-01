@@ -26,6 +26,54 @@
 </head>
 <body>
 
+
+    <section class="vh-100" style="background-image: url('https://images.unsplash.com/photo-1530543787849-128d94430c6b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-repeat: no-repeat"><div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+                    <div class="card" style="border-radius: 1rem;">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <div class="card-body p-4 p-lg-5 text-black">
+                                    <form method="POST" action="" class="d-flex flex-column align-items-center">
+                                        @csrf
+
+                                        <div class="d-flex align-items-center mb-3 pb-1">
+                                            <span class="h1 fw-bold mb-0 text-center">
+                                                <img width="45%" src="{{ asset('img/EMPRESA.png') }}" class="img-fluid" alt="">
+                                            </span>
+                                        </div>
+
+                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Restablecer Contraseña</h5>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            <label class="form-label" for="email">Correo electrónico</label>
+
+                                            @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+
+                                        <div class="pt-1 mb-4">
+                                            <button type="submit" class="btn btn-dark btn-lg btn-block">
+                                                {{ __('Enviar enlace de restablecimiento') }}
+                                            </button>
+                                        </div>
+
+                                        <a class="small text-muted" href="{{ route('login') }}">Volver al inicio de sesión</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

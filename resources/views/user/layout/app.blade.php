@@ -4,329 +4,239 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Orbitron:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/main_styles.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}"> --}}
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- Font Awesome CSS (for icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Phudu&display=swap" rel="stylesheet">
     <title>CN constructora</title>
     <link rel="icon" href="{{asset('img/EMPRESA.png')}}">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<!-- owl carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
-	<!-- magnific popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<!-- animate css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<!-- mean menu css -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
-	<!-- main style -->
-	<link rel="stylesheet" href="assets/css/main.css">
-	<!-- responsive -->
-	<link rel="stylesheet" href="assets/css/responsive.css">
+      <!-- Bootstrap CSS CDN -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="{{ asset('css/sb-user-2.min.css') }}" rel="stylesheet">
+      <!-- Font Awesome CDN -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+
 </head>
-<body>
 
- <!-- Header with phone number -->
-<style>
-    .nav-link{
-        color: #fdc830;
-        font-family: 'Kanit', sans-serif;
-font-family: 'Orbitron', sans-serif;
-    }
-    .nav-item:hover .nav-link:hover {
-        border-radius: 10px;
-        background: linear-gradient(to right, #000000, #000000);
-        color: #ffffff; /* Cambia el color del texto al pasar el cursor */
-        transition: background-color 0.8s, color 0.5s; /* Agrega una transición suave */
-    }
-</style>
+<!-- Bootstrap JS y jQuery CDN (al final del archivo body para acelerar la carga) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Navbar -->
+</head>
 
+<!-- Bootstrap JS y jQuery CDN (al final del archivo body para acelerar la carga) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
 
-    <main class="">
-        @yield('content')
+<body id="page-top">
 
-    </main>
+    <div id="wrapper">
 
+        <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
 
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <img src="{{asset('img/EMPRESA.png')}}" width="150px" alt="">
+                </div>
 
-        {{-- clientes --}}
+            </a>
 
-        <section id="fh5co-trusted" data-section="trusted">
-            <div class="fh5co-trusted">
-                <div class="container" id="Clientes-contenedor" >
-                    <div class="row" id="animate">
-                        <div class="col-md-12 section-heading text-center" id="to-animate">
-                            <h2 class="to-animate text-center" style="
-                                font-family: 'Kanit', sans-serif;
-                        font-family: 'Orbitron', sans-serif;
-                            ">Apoyados por</h2>
+            <hr class="sidebar-divider my-0">
 
-                        </div>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Control
+            </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-box"></i>
+                    <span>Productos</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Todos:</h6>
+                        <a class="collapse-item" href="">Agregar Productos</a>
+                        <a class="collapse-item" href="">Ver todos</a>
                     </div>
-                    <div class="row" id="partes">
-                         <div class="col-md-2 col-sm-4 col-xs-6 col-sm-offset-0 col-md-offset-1 fotos-cliene">
-                             <div class="partner-logo to-animate-2" id="techo">
-                                 <img src="{{asset('img/techopropio.png')}}" alt="Partners" class="img-responsive" id="techoP">
-                             </div>
-                         </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6 fotos-cliene">
-                            <div class="partner-logo to-animate-2" id="Mivi">
-                                <img src="{{asset('img/vivienda.png')}}" alt="Partners" class="img-responsive" id="img-vivienda">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6 fotos-cliene" id="minis">
-                            <div class="partner-logo to-animate-2" id="ministerio">
-                                <img src="{{asset('img/ministerio.png')}}" alt="Partners" class="img-responsive"  >
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6 fotos-cliene" id="muni">
-                            <div class="partner-logo to-animate-2" id="municipalidad">
-                                <img src="{{asset('img/municipalidad.png')}}" alt="Partners" class="img-responsive" >
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6 " id="fotos-cliente" >
-                            <div class="partner-logo to-animate-2" id="libertad">
-                                <img src="{{asset('img/libertad.png')}}" alt="Partners" class="img-responsive">
-                            </div>
-                        </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVentas"
+                    aria-expanded="true" aria-controls="collapseVentas">
+                    <i class="fas fa-fw fa-shopping-cart"></i>
+                    <span>Ventas</span>
+                </a>
+                <div id="collapseVentas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Todos:</h6>
+                        <a class="collapse-item" href="buttons.html">Agregar Productos</a>
+                        <a class="collapse-item" href="cards.html">Ver todos</a>
+                    </div>
+                </div>
+            </li>
+
+
+
+
+
+            <div class="sidebar-heading">
+                Pagina Web
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecomponents"
+                    aria-expanded="true" aria-controls="collapsecomponents">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Componentes</span>
+                </a>
+                <div id="collapsecomponents" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Diseño</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+            <!-- ... tu código existente ... -->
+
+<hr class="sidebar-divider d-none d-md-block">
+
+
+<!-- Agrega un enlace de logout -->
+<li class="nav-item">
+<a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+<i class="fas fa-fw fa-sign-out-alt"></i>
+<span>Logout</span>
+</a>
+</li>
+
+<!-- Modal de Logout -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">Selecciona "Logout" a continuación si estás listo para cerrar tu sesión actual.</div>
+    <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+        <!-- Agrega la ruta correspondiente para el logout -->
+        <a class="btn btn-primary" href="">Logout</a>
+    </div>
+</div>
+</div>
+</div>
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
 
                     </div>
                 </div>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-        </section>
-        <script>
-            // Asegúrate de que el documento esté completamente cargado
-$(document).ready(function() {
-    // Maneja el evento de hacer clic en el botón para desplazarse hacia arriba
-    $('.floating-button a').click(function() {
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
-        return false;
-    });
-});
+        </ul>
 
-        </script>
-        <style>
-            /* Estilo para el botón flotante */
-.floating-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-}
+            <div id="content-wrapper" class="d-flex flex-column">
+                <div id="content">
+                    <div class="container-fluid">
 
-/* Agrega estilos adicionales según sea necesario */
+                        <!-- Agrega un yield para el contenido específico de cada página -->
+                        @yield('content')
+                    </div>
+                </div>
 
-        </style>
-        <div class="floating-button">
-            <a href="#" class="btn btn-warning btn-lg">
-                <i class="fas fa-arrow-up"></i>
-            </a>
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Desarrollo Web Master 2023</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+    </div>
+
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <style>
-            /* Estilo para cambiar el color de fondo al pasar el mouse */
 
-/* Estilo para aplicar el filtro de desaturación (blanco y negro) al inicio */
-.partner-logo img {
-    filter: grayscale(100%);
-    transition: filter 0.3s; /* Agrega una transición suave de 0.3 segundos */
-}
+    <script src="{{ asset('js/admin.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-/* Estilo para quitar el filtro al pasar el mouse */
-.partner-logo:hover img {
-    filter: none; /* Quita el filtro, muestra la imagen a todo color al pasar el mouse */
-}
-       </style>
 
-<div class="whatsapp-button">
-    <a href="https://wa.me/51901287605" target="blank" onclick="toggleWhatsapp(event)">
-        <div class="whatsapp-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp Icon">
-        </div>
-    </a>
-</div>
 
-<div class="chatbot-button">
-    <a href="#" onclick="toggleChatbot(event)">
-        <div class="chatbot-icon">
-            <!-- Add your chatbot icon image here -->
-            <img src="https://cdn-icons-png.flaticon.com/512/4616/4616304.png" alt="Chatbot Icon">
-        </div>
-    </a>
-</div>
+            <!-- Contenido principal -->
+            <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4 content-container">
 
-<div id="chat-container">
-    <div id="chat-header">Chat con JhonatanBot</div>
-    <iframe id="chat-iframe" src='https://webchat.botframework.com/embed/CNBot-bot?s=dd47gV6ft3I.xVUrKfOT_UrS7PAq5Xb9E57tEFm1lsorLHsdSk7iGhY' style='min-width: 400px; width: 100%; min-height: 500px;background: #ffcccc;'></iframe>
-</div>
-<script>
-    function toggleChatbot(event) {
-        event.preventDefault();
-        var chatContainer = document.getElementById('chat-container');
-        chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
-    }
-
-    function toggleWhatsapp(event) {
-        // Add your WhatsApp toggle logic here
-    }
-</script>
-<style>
-    #chat-container {
-        display: none;
-        position: fixed;
-        bottom: 90px;
-        right: 150px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        transition: display 0.3s ease-in-out;
-        z-index: 9999;
-    }
-
-    #chat-header {
-        background-color: #25D366;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-        font-weight: bold;
-    }
-
-    #chat-iframe {
-        width: 100%;
-        height: calc(100% - 40px);
-        border: none;
-        background-color: #f0f0f0;
-    }
-
-    .chatbot-button {
-        position: fixed;
-        bottom: 30px;
-        right: 100px; /* Adjust this value as needed */
-        width: 60px;
-        height: 60px;
-        background-color: #4285f4; /* Change the color as needed */
-        border-radius: 50%;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        animation: radar 2s linear infinite;
-        z-index: 999;
-    }
-
-    .chatbot-icon {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .chatbot-icon img {
-        width: 40px;
-        height: 40px;
-    }
-</style>
-<style>
-.whatsapp-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366; /* Color de fondo de WhatsApp */
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    animation: radar 2s linear infinite; /* Animación de radar */
-    z-index: 999; /* Añade una alta z-index para asegurarte de que esté en la parte superior de otros elementos */
-}
-
-.whatsapp-icon {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.whatsapp-icon img {
-    width: 40px;
-    height: 40px;
-}
-
-@keyframes radar {
-    0% {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.4);
-    }
-    50% {
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), 0px 0px 30px rgba(0, 0, 0, 0.5);
-    }
-    100% {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.4);
-    }
-}
-        </style>
-
- <!-- footer -->
- <footer class="pie-pagina">
-    <div class="grupo-1">
-        <div class="box">
-            <figure>
-                <a href="#">
-                    <img src="{{asset('img/EMPRESA.png')}}" alt="Logo de SLee Dw">
-                </a>
-            </figure>
-        </div>
-        <div class="box">
-            <h2>SOBRE NOSOTROS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
-        </div>
-        <div class="box">
-            <h2>SIGUENOS</h2>
-            <div class="red-social">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-youtube"></a>
+                <div class="content">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>
-    <div class="grupo-2">
-        <small id="pie">&copy; 2023 <b>CN Constructora</b> - Todos los Derechos Reservados.</small>
-    </div>
-</footer>
-
-
-{{-- bot --}}
-<script>
-    function toggleChat(event) {
-        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-            var chatContainer = document.getElementById('chat-container');
-            chatContainer.style.display = (chatContainer.style.display === 'none' || chatContainer.style.display === '') ? 'block' : 'none';
-    }
-</script>
-
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://kit.fontawesome.com/6b76d54a65.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/scrollmagic/ScrollMagic.min.js') }}"></script>
-    <script src="{{ asset('js/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
-    <script src="{{ asset('js/custom.js') }}"></script>
-
 
 
 </body>

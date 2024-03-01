@@ -56,8 +56,10 @@ Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVi
 
 
 Route::get('/usuario', [UsuarioController::class,'UsuarioIndex'])->name('user.UsuarioIndex');
+Route::get('/dashboard-user', [vistasController::class,'mainUser'])->name('user.dashboard');
 Route::post('/register', [ClienteController::class, 'register'])->name('register');
 Route::post('/login', [ClienteController::class, 'login'])->name('login');
+Route::get('/forgotPassword', [vistasController::class, 'forgotPass'])->name('forgotPass');
 
 //
 
