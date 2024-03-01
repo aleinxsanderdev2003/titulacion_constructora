@@ -2,20 +2,32 @@
 return [
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'clientes',
     ],
 
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+            'log' => true,
         ],
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+
 
         'users' => [
             'driver' => 'session', // Puedes usar 'session' o 'token' según tus necesidades.
             'provider' => 'users', // Cambia esto si tu proveedor se llama de otra manera.
         ],
 
+        'clientes'=>[
+            'drive' =>'session',
+            'provider'=>'clientes',
+            'log' => true,
+        ],
 
         'administrators' => [
             'driver' => 'session',
@@ -29,11 +41,16 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
-        'administrators' => [
+        'clientes' => [
             'driver' => 'eloquent',
-            'model' => App\Models\SuperUser::class, // Asegúrate de especificar el modelo correcto para tus administradores.
+            'model' => App\Models\Cliente::class, // Asegúrate de especificar el modelo correcto para tus clientes.
         ],
+
+
+        // 'administrators' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\SuperUser::class, // Asegúrate de especificar el modelo correcto para tus administradores.
+        // ],
     ],
 
 
@@ -41,6 +58,12 @@ return [
         'administrators' => [
             'provider' => 'administrators',
             'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'clientes' => [
+            'provider' => 'clientes',
+            'table' => 'password_resets_clientes',
             'expire' => 60,
             'throttle' => 60,
         ],

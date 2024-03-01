@@ -16,7 +16,7 @@ class ClienteController extends Controller
         $validator = Validator::make($request->all(), [
             'nombres' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
-            'email' => 'required|email|unique:clientes',
+            'email' => 'required|email|unique:clientes,email',
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
 
@@ -55,6 +55,8 @@ class ClienteController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
+            // dd(Auth::user()); // Puedes usar var_dump(Auth::user()) también
+
             // El usuario ha sido autenticado correctamente
             return redirect('/admin');
         } else {

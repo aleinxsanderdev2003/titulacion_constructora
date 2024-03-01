@@ -41,19 +41,20 @@
                                         </div>
                                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Inicia sesión con tu cuenta</h5>
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form2Example17" name="email" class="form-control form-control-lg" /> <!-- Asigna el nombre 'email' -->
+                                            <input type="email" id="form2Example17" name="email" class="form-control form-control-lg" autocomplete="email" /> <!-- Agrega el atributo autocomplete="email" -->
                                             <label class="form-label" for="form2Example17">Correo electrónico</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="form2Example27" name="password" class="form-control form-control-lg" /> <!-- Asigna el nombre 'password' -->
+                                            <input type="password" id="form2Example27" name="password" class="form-control form-control-lg" autocomplete="current-password" /> <!-- Agrega el atributo autocomplete="current-password" -->
                                             <label class="form-label" for="form2Example27">Contraseña</label>
                                         </div>
                                         <div class="pt-1 mb-4">
-                                            <button class="btn btn-dark btn-lg btn-block" type="submit">INGRESAR</button> <!-- Cambiado de type="button" a type="submit" -->
+                                            <button class="btn btn-dark btn-lg btn-block" type="submit">INGRESAR</button>
                                         </div>
                                         <a class="small text-muted" href="#!">¿Olvidaste tu contraseña?</a>
                                         <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No tienes una cuenta? <a href="{{route('registerUser')}}" style="color: #393f81;">Regístrate aquí</a></p>
                                     </form>
+
                                 </div>
                             </div>
                         </div>

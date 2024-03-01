@@ -22,21 +22,6 @@ public function logout()
     return redirect()->route('login.form'); // Redirige al formulario de inicio de sesión
 }
 
-
-
-  /*   public function login(Request $request)
-    {
-        $this->validateLogin($request);
-
-        // Utiliza el método attempt para autenticar al usuario
-        if ($this->attemptLogin($request)) {
-            return $this->sendLoginResponse($request);
-        }
-
-        // Si la autenticación falla, muestra un mensaje de error
-        return $this->sendFailedLoginResponse($request);
-    } */
-
     public function login(Request $request)
     {
         $this->validateLogin($request);

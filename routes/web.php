@@ -45,10 +45,11 @@ Route::post('/register', [ClienteController::class, 'register'])->name('register
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Ruta para la vista de presentación
-Route::prefix('admin')->middleware(['auth'])->group(function () {
-    Route::get('/', [AdminController::class, 'welcome'])->name('admin.welcome');
-    // Otras rutas de administrador aquí
+Route::middleware('auth')->group(function () {
+    Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
+    // Otras rutas protegidas por autenticación aquí
 });
+
 Route::get('/techo-propio', [TechoPropioController::class, 'mostrar'])->name('techoPropio');
 Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVivienda');
 
