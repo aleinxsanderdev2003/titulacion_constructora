@@ -14,16 +14,6 @@ use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ClienteController;
 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', [InicioController::class, 'pruebaindex'])->name('index');
 Route::get('/contacto' , [vistasController::class, 'contacto'])->name('contacto');
@@ -35,38 +25,39 @@ Route::resource('proyectos', ProyectoController::class);
 Route::get('/proyectos', [ProyectoController::class,'index'])->name('admin.proyecto.index');
 
 // routes/web.php
-Route::group(['middleware' => 'web'], function () {
-    // Rutas de autenticación
-    Route::get('/login', [LoginController::class, 'mostrarLogin'])->name('login.form');
-    Route::post('/login_sesion', [LoginController::class, 'login'])->name('login');
-    Route::get('/', [InicioController::class, 'index'])->name('index');
-});
+// Route::group(['middleware' => 'web'], function () {
+//     Route::get('/login', [LoginController::class, 'mostrarLogin'])->name('login.form');
+//     Route::post('/login_sesion', [LoginController::class, 'login'])->name('login');
+//     Route::get('/', [InicioController::class, 'index'])->name('index');
+// });
 
+
+// rutas para el login
 Route::get('/IniciarSesion', [vistasController::class, 'loginUser'])->name('loginUser');
-Route::get('/Registrarse', [vistasController::class, 'registerUser'])->name('registerUser');
-
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-// Ruta para la vista de presentación
-Route::get('/admin', [AdminController::class,'welcome'])->name('admin.welcome');
-Route::get('/techo-propio', [TechoPropioController::class, 'mostrar'])->name('techoPropio');
-Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVivienda');
-
-
-
-
-
-Route::get('/usuario', [UsuarioController::class,'UsuarioIndex'])->name('user.UsuarioIndex');
-Route::get('/dashboard-user', [vistasController::class,'mainUser'])->name('user.dashboard');
-Route::post('/register', [ClienteController::class, 'register'])->name('register');
 Route::post('/login', [ClienteController::class, 'login'])->name('login');
 Route::get('/forgotPassword', [vistasController::class, 'forgotPass'])->name('forgotPass');
 
+// rutas de post y get de register
+Route::get('/Registrarse', [vistasController::class, 'registerUser'])->name('registerUser');
+Route::post('/register', [ClienteController::class, 'register'])->name('register');
+
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Ruta para la vista de presentación
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    Route::get('/', [AdminController::class, 'welcome'])->name('admin.welcome');
+    // Otras rutas de administrador aquí
+});
+Route::get('/techo-propio', [TechoPropioController::class, 'mostrar'])->name('techoPropio');
+Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVivienda');
+
+// ruta para el usuario
+Route::get('/usuario', [UsuarioController::class,'UsuarioIndex'])->name('user.UsuarioIndex');
+Route::get('/dashboard-user', [vistasController::class,'mainUser'])->name('user.dashboard');
+
 //
-
 Route::get('/noticias', [NoticiasContoller::class, 'index'])->name('noticias.index');
-//Route::get('/noticias/create', [NoticiasController::class, 'create'])->name('noticias.create');
 Route::post('/noticias', [NoticiasContoller::class, 'store'])->name('noticias.store');
-
-// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

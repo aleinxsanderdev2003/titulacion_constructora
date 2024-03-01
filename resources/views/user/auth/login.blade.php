@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main_styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}"> --}}
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
@@ -35,20 +35,21 @@
                             <div class="col-md-12">
                                 <div class="card-body p-4 p-lg-5 text-black">
                                     <form action="{{ route('login') }}" method="post" class="d-flex flex-column align-items-center">
+                                        @csrf <!-- Agrega el campo csrf -->
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <span class="h1 fw-bold mb-0 text-center"><img width="45%" src="{{asset('img/EMPRESA.png')}}" class="img-fluid" alt=""></span>
                                         </div>
                                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Inicia sesión con tu cuenta</h5>
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                                            <input type="email" id="form2Example17" name="email" class="form-control form-control-lg" /> <!-- Asigna el nombre 'email' -->
                                             <label class="form-label" for="form2Example17">Correo electrónico</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                                            <input type="password" id="form2Example27" name="password" class="form-control form-control-lg" /> <!-- Asigna el nombre 'password' -->
                                             <label class="form-label" for="form2Example27">Contraseña</label>
                                         </div>
                                         <div class="pt-1 mb-4">
-                                            <button class="btn btn-dark btn-lg btn-block" type="button">INGRESAR</button>
+                                            <button class="btn btn-dark btn-lg btn-block" type="submit">INGRESAR</button> <!-- Cambiado de type="button" a type="submit" -->
                                         </div>
                                         <a class="small text-muted" href="#!">¿Olvidaste tu contraseña?</a>
                                         <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No tienes una cuenta? <a href="{{route('registerUser')}}" style="color: #393f81;">Regístrate aquí</a></p>

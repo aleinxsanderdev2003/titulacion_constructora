@@ -57,6 +57,10 @@
                                             <input type="password" id="form2Example27" name="password" class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example27">Contraseña</label>
                                         </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="form2Example28" name="password_confirmation" class="form-control form-control-lg" />
+                                            <label class="form-label" for="form2Example28">Confirmar Contraseña</label>
+                                        </div>
                                         <div class="pt-1 mb-4">
                                             <button class="btn btn-dark btn-lg btn-block" type="submit">REGISTRARSE</button>
                                         </div>

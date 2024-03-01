@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Http\Request;
@@ -15,15 +17,16 @@ class ClienteController extends Controller
             'nombres' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
             'email' => 'required|email|unique:clientes',
-            'password' => ['required', 'confirmed', \Illuminate\Validation\Rules\Password::min(8)],
+            'password' => ['required', 'confirmed', 'min:8'],
         ]);
 
-      // Después de la validación
-if ($validator->fails()) {
-    return redirect()->route('registerUser')->withErrors($validator)->withInput();
-}
+            // Después de la validación
+        if ($validator->fails()) {
+            // ($validator->errors());
+            return redirect()->route('registerUser')->withErrors($validator)->withInput();
+        }
 
-
+        // dd($request->all());
         // Crear el nuevo usuario
         $cliente = new Cliente();
         $cliente->nombres = $request->input('nombres');
@@ -37,8 +40,26 @@ if ($validator->fails()) {
     }
 
 
-public function login(Request $request)
-{
-    // lógica de inicio de sesión aquí
-}
+    public function login(Request $request)
+    {
+        // Validar los datos del formulario
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->route('loginUser')->withErrors($validator)->withInput();
+        }
+
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // El usuario ha sido autenticado correctamente
+            return redirect('/admin');
+        } else {
+            // La autenticación ha fallado
+            return redirect()->route('loginUser')->with('error', 'Credenciales incorrectas');
+        }
+    }
 }
