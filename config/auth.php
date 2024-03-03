@@ -24,7 +24,7 @@ return [
         ],
 
         'clientes'=>[
-            'drive' =>'session',
+            'driver' =>'session',
             'provider'=>'clientes',
             'log' => true,
         ],

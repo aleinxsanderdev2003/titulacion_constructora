@@ -20,19 +20,21 @@ class ClienteController extends Controller
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
 
-            // Después de la validación
+        // Después de la validación
         if ($validator->fails()) {
-            // ($validator->errors());
             return redirect()->route('registerUser')->withErrors($validator)->withInput();
         }
 
-        // dd($request->all());
         // Crear el nuevo usuario
         $cliente = new Cliente();
         $cliente->nombres = $request->input('nombres');
         $cliente->apellidos = $request->input('apellidos');
         $cliente->email = $request->input('email');
-        $cliente->password = Hash::make($request->input('password'));
+
+        // Imprimir la contraseña hasheada antes de guardarla
+        $hashedPassword = Hash::make($request->input('password'));
+
+        $cliente->password = $hashedPassword;
         $cliente->save();
 
         // Redireccionar o realizar otras acciones después del registro
@@ -54,14 +56,15 @@ class ClienteController extends Controller
 
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            // dd(Auth::user()); // Puedes usar var_dump(Auth::user()) también
-
-            // El usuario ha sido autenticado correctamente
-            return redirect('/admin');
+        // Intento de autenticación
+        if (Auth::guard('clientes')->attempt($credentials)) {
+            // Contraseña válida
+            return redirect('/dashboard-user');
         } else {
-            // La autenticación ha fallado
+            // Contraseña incorrecta
+            // Puedes comentar la línea dd() después de solucionar el problema
             return redirect()->route('loginUser')->with('error', 'Credenciales incorrectas');
         }
     }
+
 }
