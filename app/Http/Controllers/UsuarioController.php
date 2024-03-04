@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Cliente;
 use Illuminate\Support\Facades\Storage;
 
 class UsuarioController extends Controller
@@ -25,36 +26,44 @@ class UsuarioController extends Controller
 
 public function updateProfile(Request $request)
 {
-    $user = Auth::guard('clientes')->user();
+    // Verifica si el usuario está autenticado
+    if (Auth::guard('clientes')->check()) {
+        // Obtiene la instancia del cliente autenticado
+        $user = Auth::guard('clientes')->user();
 
-    // Validar los datos del formulario de edición aquí
-    $request->validate([
-        'nombres' => 'required|string|max:255',
-        'apellidos' => 'required|string|max:255',
-        'email' => 'required|email',
-        'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Ajusta las extensiones y el tamaño según tus necesidades
-    ]);
+        // Validar los datos del formulario de edición aquí
+        $request->validate([
+            'nombres' => 'required|string|max:255',
+            'apellidos' => 'required|string|max:255',
+            'email' => 'required|email',
+            'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Ajusta las extensiones y el tamaño según tus necesidades
+        ]);
 
-    // Actualizar los datos del usuario
-    $user->update([
-        'nombres' => $request->input('nombres'),
-        'apellidos' => $request->input('apellidos'),
-        'email' => $request->input('email'),
-    ]);
+        // Actualizar los datos del usuario
+        $user->nombres = $request->input('nombres');
+        $user->apellidos = $request->input('apellidos');
+        $user->email = $request->input('email');
 
-    // Actualizar la foto de perfil si se proporciona
-    if ($request->hasFile('photo')) {
-        // Eliminar la foto anterior si existe
-        if ($user->photo) {
-            Storage::delete($user->photo);
+        // Actualizar la foto de perfil si se proporciona
+        if ($request->hasFile('photo')) {
+            // Eliminar la foto anterior si existe
+            if ($user->photo) {
+                Storage::delete($user->photo);
+            }
+
+            // Almacenar la nueva foto
+            $path = $request->file('photo')->store('profile_photos', 'public');
+            $user->photo = $path;
         }
 
-        // Almacenar la nueva foto
-        $path = $request->file('photo')->store('profile_photos', 'public');
-        $user->update(['photo' => $path]);
-    }
+        // Guardar los cambios en el perfil
+        $user->save();
 
-    // Redireccionar con un mensaje de éxito
-    return redirect()->route('user.profile')->with('success', 'Perfil actualizado correctamente');
+        // Redireccionar con un mensaje de éxito
+        return redirect()->route('user.dashboard.profile')->with('success', 'Perfil actualizado correctamente');
+    } else {
+        // Manejar el caso en que el usuario no esté autenticado
+        return redirect()->route('loginUser');
+    }
 }
 }

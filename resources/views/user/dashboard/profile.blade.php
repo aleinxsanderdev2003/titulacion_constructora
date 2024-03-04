@@ -21,7 +21,7 @@
                 <div class="col-md-6">
                     <p class="h4 mb-4">Foto de Perfil</p>
                     @if($user->photo)
-                        <img src="{{ asset($user->photo) }}" alt="Foto de Perfil" class="img-fluid">
+                        <img src="{{ asset('storage/' . $user->photo) }}" alt="Foto de perfil">
                     @else
                         <p>No hay foto de perfil. <a href="{{ route('user.dashboard.profile_edit') }}">Agregar foto</a></p>
                     @endif

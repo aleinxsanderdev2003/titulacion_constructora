@@ -1,12 +1,13 @@
 @extends('user.layout.app')
-
 @section('content')
+
     <div class="container mt-3">
         <div class="card">
             <div class="card-header">
                 <h2 class="mb-0">Editar Perfil</h2>
             </div>
             <div class="card-body">
+                <form action="{{ route('user.profile.update') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="nombres" class="form-label">Nombres:</label>
