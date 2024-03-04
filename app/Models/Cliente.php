@@ -9,10 +9,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Cliente extends Authenticatable implements AuthenticatableContract
+
 {
     use Notifiable;
-    // En tu modelo Cliente
     protected $table = 'clientes';
-protected $fillable = ['nombres', 'apellidos', 'email', 'password'];
-
+    protected $fillable = ['nombres', 'apellidos', 'email', 'password','photo'];
 }

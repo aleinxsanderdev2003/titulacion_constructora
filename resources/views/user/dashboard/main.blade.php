@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="mb-4">Bienvenido al Panel de Administración</h1>
+                <h1 class="mb-4">Bienvenido  {{ $nombreUsuario }}</h1>
                 <div class="">
                     <div class="card-body">
                         <h5 class="card-title">¿Qué puedes hacer aquí?</h5>

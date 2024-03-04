@@ -43,28 +43,38 @@ class ClienteController extends Controller
 
 
     public function login(Request $request)
-    {
-        // Validar los datos del formulario
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+{
+    // Validar los datos del formulario
+    $validator = Validator::make($request->all(), [
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
 
-        if ($validator->fails()) {
-            return redirect()->route('loginUser')->withErrors($validator)->withInput();
-        }
-
-        $credentials = $request->only('email', 'password');
-
-        // Intento de autenticación
-        if (Auth::guard('clientes')->attempt($credentials)) {
-            // Contraseña válida
-            return redirect('/dashboard-user');
-        } else {
-            // Contraseña incorrecta
-            // Puedes comentar la línea dd() después de solucionar el problema
-            return redirect()->route('loginUser')->with('error', 'Credenciales incorrectas');
-        }
+    if ($validator->fails()) {
+        return redirect()->route('loginUser')->withErrors($validator)->withInput();
     }
+
+    $credentials = $request->only('email', 'password');
+
+    // Intento de autenticación
+    if (Auth::guard('clientes')->attempt($credentials)) {
+        // Obtener el usuario autenticado
+        $user = Auth::guard('clientes')->user();
+
+        // Obtener el nombre completo del usuario
+        $nombreUsuario = $user->nombres . ' ' . $user->apellidos;
+
+        // Compartir la variable con todas las vistas del usuario
+        view()->share('nombreUsuario', $nombreUsuario);
+
+        // Redireccionar a la página de administración del usuario
+        return redirect('/dashboard-user');
+    } else {
+        // Contraseña incorrecta
+        return redirect()->route('loginUser')->with('error', 'Credenciales incorrectas');
+    }
+}
+
+
 
 }

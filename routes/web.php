@@ -58,7 +58,8 @@ Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVi
 // ruta para el usuario
 Route::get('/usuario', [UsuarioController::class,'UsuarioIndex'])->name('user.UsuarioIndex');
 Route::get('/dashboard-user', [vistasController::class,'mainUser'])->name('user.dashboard');
-
+Route::get('/dashboard-user-profile', [UsuarioController::class,'showProfile'])->name('user.dashboard.profile');
+Route::get('/dashboard-user-profile-edit', [UsuarioController::class,'editProfile'])->name('user.dashboard.profile_edit');
 //
 Route::get('/noticias', [NoticiasContoller::class, 'index'])->name('noticias.index');
 Route::post('/noticias', [NoticiasContoller::class, 'store'])->name('noticias.store');
