@@ -66,4 +66,5 @@ public function updateProfile(Request $request)
         return redirect()->route('loginUser');
     }
 }
+
 }

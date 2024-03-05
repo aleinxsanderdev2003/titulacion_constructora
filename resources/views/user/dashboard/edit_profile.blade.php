@@ -3,7 +3,7 @@
 
     <div class="container mt-3">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header bg-gradient-warning">
                 <h2 class="mb-0">Editar Perfil</h2>
             </div>
             <div class="card-body">

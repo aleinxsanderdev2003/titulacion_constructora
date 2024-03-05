@@ -61,6 +61,7 @@ Route::get('/dashboard-user', [vistasController::class,'mainUser'])->name('user.
 Route::get('/dashboard-user-profile', [UsuarioController::class,'showProfile'])->name('user.dashboard.profile');
 Route::get('/dashboard-user-profile-edit', [UsuarioController::class,'editProfile'])->name('user.dashboard.profile_edit');
 Route::post('/dashboard-user-profile/update', [UsuarioController::class, 'updateProfile'])->name('user.profile.update');
+Route::get('/logout', [ClienteController::class, 'updateProfile'])->name('admin.logout');
 //
 Route::get('/noticias', [NoticiasContoller::class, 'index'])->name('noticias.index');
 Route::post('/noticias', [NoticiasContoller::class, 'store'])->name('noticias.store');

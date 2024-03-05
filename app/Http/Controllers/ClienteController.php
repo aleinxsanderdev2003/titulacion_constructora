@@ -74,7 +74,12 @@ class ClienteController extends Controller
         return redirect()->route('loginUser')->with('error', 'Credenciales incorrectas');
     }
 }
+public function logout()
+{
+    Auth::guard('clientes')->logout(); // Utiliza el guard correspondiente
 
+    return redirect('/login'); // Redirige a la página de inicio de sesión o a donde desees
+}
 
 
 }
