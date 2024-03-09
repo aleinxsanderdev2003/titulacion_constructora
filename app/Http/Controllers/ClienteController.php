@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
@@ -41,7 +42,6 @@ class ClienteController extends Controller
         return redirect()->route('registerUser')->with('success', '¡Registro exitoso!');
     }
 
-
     public function login(Request $request)
 {
     // Validar los datos del formulario
@@ -64,16 +64,15 @@ class ClienteController extends Controller
         // Obtener el nombre completo del usuario
         $nombreUsuario = $user->nombres . ' ' . $user->apellidos;
 
-        // Compartir la variable con todas las vistas del usuario
-        view()->share('nombreUsuario', $nombreUsuario);
-
         // Redireccionar a la página de administración del usuario
-        return redirect('/dashboard-user');
+        return redirect('/dashboard-user')->with('success', 'Inicio de sesión exitoso. ¡Bienvenido, ' . $nombreUsuario . '!');
     } else {
         // Contraseña incorrecta
         return redirect()->route('loginUser')->with('error', 'Credenciales incorrectas');
     }
 }
+
+
 public function logout()
 {
     Auth::guard('clientes')->logout(); // Utiliza el guard correspondiente

@@ -11,7 +11,9 @@
       <link href="{{ asset('css/sb-user-2.min.css') }}" rel="stylesheet">
       <!-- Font Awesome CDN -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
+<!-- Agrega estos enlaces en el encabezado de tu archivo HTML -->
+<link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -19,7 +21,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-</head>
+</head><script src="
+https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js
+"></script>
 
 <!-- Bootstrap JS y jQuery CDN (al final del archivo body para acelerar la carga) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -29,7 +33,7 @@
 <body id="page-top">
 
     <div id="wrapper">
-        <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul style="background: linear-gradient(0deg, rgba(241,139,14,1) 25%, rgba(241,139,14,1) 50%, rgba(82,80,79,1) 100%);" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
@@ -41,7 +45,7 @@
 
             <hr class="sidebar-divider">
             <div class="sidebar-heading">
-               <span class="text-black">PERFIL</span>
+               <span class="text-white">PERFIL</span>
             </div>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -208,7 +212,21 @@
 
         </div>
     </div>
-
+    @if(session('success') || session('error'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            @if(session('success'))
+                Swal.fire({
+                    title: 'Éxito',
+                    text: '{{ session('success') }}',
+                    icon: 'success',
+                    timer: 3000,
+                    timerProgressBar: true,
+                });
+            @endif
+        });
+    </script>
+@endif
 
     <script src="{{ asset('js/admin.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

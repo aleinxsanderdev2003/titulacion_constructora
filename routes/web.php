@@ -50,6 +50,8 @@ Route::post('/register', [ClienteController::class, 'register'])->name('register
 // });
 
  Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
+ Route::post('/loginAdmin',[AdminController::class, 'login'])->name('login.admin');
+ Route::get('/admin-iniciarsesion',[AdminController::class, 'loginAdmin'])->name('admin.login.view');
 
 
 Route::get('/techo-propio', [TechoPropioController::class, 'mostrar'])->name('techoPropio');

@@ -28,12 +28,13 @@
     <div id="wrapper">
 
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
+<br>
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+
                 <div class="sidebar-brand-icon">
-                    <img src="{{asset('img/logo.png')}}" width="50px" alt="">
+                    <img class="img-fluid" src="{{asset('img/EMPRESA.png')}}"  alt="">
                 </div>
-                <div class="sidebar-brand-text mx-3">ADMINISTRADOR</div>
+
             </a>
 
             <hr class="sidebar-divider my-0">
@@ -46,7 +47,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-box"></i>
-                    <span>Productos</span>
+                    <span>Clientes</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -225,13 +226,7 @@
 
 
 
-            <!-- Contenido principal -->
-            <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4 content-container">
 
-                <div class="content">
-                    @yield('content')
-                </div>
-            </div>
         </div>
     </div>
 
