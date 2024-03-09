@@ -52,7 +52,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Todos:</h6>
-                        <a class="collapse-item" href="">Agregar Productos</a>
+                        <a class="collapse-item" href="">Clientes</a>
                         <a class="collapse-item" href="">Ver todos</a>
                     </div>
                 </div>
@@ -63,13 +63,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVentas"
                     aria-expanded="true" aria-controls="collapseVentas">
                     <i class="fas fa-fw fa-shopping-cart"></i>
-                    <span>Ventas</span>
+                    <span>Lugares</span>
                 </a>
                 <div id="collapseVentas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Todos:</h6>
-                        <a class="collapse-item" href="buttons.html">Agregar Productos</a>
-                        <a class="collapse-item" href="cards.html">Ver todos</a>
+                        <a class="collapse-item" href="buttons.html">Visitados</a>
+                        <a class="collapse-item" href="cards.html">Registrar nuevos </a>
                     </div>
                 </div>
             </li>
@@ -122,32 +122,34 @@
 
 
 <!-- Agrega un enlace de logout -->
+<!-- Agrega un enlace de logout -->
 <li class="nav-item">
-<a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
-<i class="fas fa-fw fa-sign-out-alt"></i>
-<span>Logout</span>
-</a>
+    <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+        <i class="fas fa-fw fa-sign-out-alt"></i>
+        <span>Logout</span>
+    </a>
 </li>
 
 <!-- Modal de Logout -->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-    <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Selecciona "Logout" a continuación si estás listo para cerrar tu sesión actual.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <!-- Modifica el enlace para utilizar la ruta de logout -->
+                <a class="btn btn-primary" href="{{ route('admin.logout') }}">Logout</a>
+            </div>
+        </div>
     </div>
-    <div class="modal-body">Selecciona "Logout" a continuación si estás listo para cerrar tu sesión actual.</div>
-    <div class="modal-footer">
-        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-        <!-- Agrega la ruta correspondiente para el logout -->
-        <a class="btn btn-primary" href="">Logout</a>
-    </div>
 </div>
-</div>
-</div>
+
             <hr class="sidebar-divider">
 
             <div class="sidebar-heading">

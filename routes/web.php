@@ -8,29 +8,15 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProyectoController;
-
 use App\Http\Controllers\NoticiasContoller;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ClienteController;
-
-
-
+ // RUTAS WEB
+ Route::get('/techo-propio', [TechoPropioController::class, 'mostrar'])->name('techoPropio');
+ Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVivienda');
 Route::get('/', [InicioController::class, 'pruebaindex'])->name('index');
 Route::get('/contacto' , [vistasController::class, 'contacto'])->name('contacto');
 Route::get('/nosotros' , [vistasController::class, 'nosotros'])->name('nosotros');
-
-// RUTAS PARA LA PARTE ADMINISTRATIVA
-Route::resource('admin/proyectos', ProyectoController::class);
-Route::resource('proyectos', ProyectoController::class);
-Route::get('/proyectos', [ProyectoController::class,'index'])->name('admin.proyecto.index');
-
-// routes/web.php
-// Route::group(['middleware' => 'web'], function () {
-//     Route::get('/login', [LoginController::class, 'mostrarLogin'])->name('login.form');
-//     Route::post('/login_sesion', [LoginController::class, 'login'])->name('login');
-//     Route::get('/', [InicioController::class, 'index'])->name('index');
-// });
-
 
 // rutas para el login
 Route::get('/IniciarSesion', [vistasController::class, 'loginUser'])->name('loginUser');
@@ -41,21 +27,15 @@ Route::get('/forgotPassword', [vistasController::class, 'forgotPass'])->name('fo
 Route::get('/Registrarse', [vistasController::class, 'registerUser'])->name('registerUser');
 Route::post('/register', [ClienteController::class, 'register'])->name('register');
 
-
-// Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-
-// Ruta para la vista de presentación
-// Route::middleware('auth')->group(function () {
-//     Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
-// });
-
- Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
- Route::post('/loginAdmin',[AdminController::class, 'login'])->name('login.admin');
- Route::get('/admin-iniciarsesion',[AdminController::class, 'loginAdmin'])->name('admin.login.view');
+// ADMIN RUTAS
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
+    Route::get('/admin-iniciarsesion', [AdminController::class, 'loginAdmin'])->name('admin.login.view')->middleware('guest');
+    Route::post('/loginAdmin', [AdminController::class, 'login'])->name('login.admin');
+    Route::post('/logoutadmin', [AdminController::class, 'logout'])->name('admin.logout');
+});
 
 
-Route::get('/techo-propio', [TechoPropioController::class, 'mostrar'])->name('techoPropio');
-Route::get('/mi-Vivienda', [MiViviendaController::class, 'muestra'])->name('miVivienda');
 
 // ruta para el usuario
 Route::get('/usuario', [UsuarioController::class,'UsuarioIndex'])->name('user.UsuarioIndex');
@@ -64,8 +44,4 @@ Route::get('/dashboard-user-profile', [UsuarioController::class,'showProfile'])-
 Route::get('/dashboard-user-profile-edit', [UsuarioController::class,'editProfile'])->name('user.dashboard.profile_edit');
 Route::post('/dashboard-user-profile/update', [UsuarioController::class, 'updateProfile'])->name('user.profile.update');
 Route::get('/logout', [ClienteController::class, 'updateProfile'])->name('admin.logout');
-//
-Route::get('/noticias', [NoticiasContoller::class, 'index'])->name('noticias.index');
-Route::post('/noticias', [NoticiasContoller::class, 'store'])->name('noticias.store');
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

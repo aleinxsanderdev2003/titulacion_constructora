@@ -80,5 +80,12 @@ public function logout()
     return redirect('/login'); // Redirige a la página de inicio de sesión o a donde desees
 }
 
+public function updateProfile(Request $request)
+    {
+        // Lógica para actualizar el perfil del cliente
+        // ...
+
+        return redirect()->route('admin.login.view');
+    }
 
 }
