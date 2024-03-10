@@ -30,8 +30,9 @@ return [
         ],
 
         'administrators' => [
-            'driver' => 'session',
-            'provider' => 'administrators', // Esto debe coincidir con el nombre de tu proveedor de administradores.
+            'driver' =>'session',
+            'provider'=>'clientes',
+            'log' => true,// Esto debe coincidir con el nombre de tu proveedor de administradores.
         ],
     ],
 
@@ -47,10 +48,10 @@ return [
         ],
 
 
-        // 'administrators' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\Models\SuperUser::class, // Asegúrate de especificar el modelo correcto para tus administradores.
-        // ],
+         'administrators' => [
+             'driver' => 'eloquent',
+             'model' => App\Models\Admin::class, // Asegúrate de especificar el modelo correcto para tus administradores.
+         ],
     ],
 
 

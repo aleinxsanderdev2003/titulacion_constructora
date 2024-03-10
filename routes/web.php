@@ -28,15 +28,10 @@ Route::get('/Registrarse', [vistasController::class, 'registerUser'])->name('reg
 Route::post('/register', [ClienteController::class, 'register'])->name('register');
 
 // ADMIN RUTAS
-Route::group(['middleware' => ['web']], function () {
     Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
-    Route::get('/admin-iniciarsesion', [AdminController::class, 'loginAdmin'])->name('admin.login.view')->middleware('guest');
+    Route::get('/admin-iniciarsesion', [AdminController::class, 'loginAdmin'])->name('admin.login.view');
     Route::post('/loginAdmin', [AdminController::class, 'login'])->name('login.admin');
     Route::post('/logoutadmin', [AdminController::class, 'logout'])->name('admin.logout');
-});
-
-
-
 // ruta para el usuario
 Route::get('/usuario', [UsuarioController::class,'UsuarioIndex'])->name('user.UsuarioIndex');
 Route::get('/dashboard-user', [vistasController::class,'mainUser'])->name('user.dashboard');

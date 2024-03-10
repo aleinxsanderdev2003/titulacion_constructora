@@ -1,49 +1,54 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 class AdminController extends Controller
 {
     public function welcome()
     {
-
          // Verifica si el usuario está autenticado
-    if (!auth()->check()) {
-        // Redirige a la vista de inicio de sesión para administradores
-        return redirect()->route('admin.login.view');
-    }
-
     // Si el usuario está autenticado, muestra la vista principal del administrador
     return view('admin.main');
     }
 
-
-
 public function loginAdmin()
 {
-
     return view('admin.auth.login');
 }
+
 public function login(Request $request)
 {
-    // Lógica de autenticación con un array de administradores
+    // Validar los datos del formulario
+    $validator = Validator::make($request->all(), [
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
+
+    if ($validator->fails()) {
+        return redirect()->route('admin.login.view')->withErrors($validator)->withInput();
+    }
+
     $credentials = $request->only('email', 'password');
 
-    $admins = [
-        'admin@wolf.com' => '12345', // Agrega más admin según sea necesario
-    ];
+    // Intento de autenticación
+    if (Auth::guard('administrators')->attempt($credentials)) {
+        // Obtener el usuario autenticado
+        $user = Auth::guard('administrators')->user();
 
-    if (isset($admins[$credentials['email']]) && $admins[$credentials['email']] === $credentials['password']) {
-        // Autenticación exitosa
-        session(['admin' => true]); // Guarda la información de autenticación en la sesión
-        return redirect()->route('admin.welcome');
+        // Obtener el nombre completo del usuario
+        $nombreUsuario = $user->nombres . ' ' . $user->apellidos;
+
+        // Redireccionar a la página de administración del usuario
+
+        return redirect('/admin')->with('success', 'Inicio de sesión exitoso. ¡Bienvenido, ' . $nombreUsuario . '!');
     } else {
-        // Autenticación fallida
+        // Contraseña incorrecta
         return redirect()->route('admin.login.view')->with('error', 'Credenciales incorrectas');
     }
 }
+
 
 public function logout(Request $request)
 {
