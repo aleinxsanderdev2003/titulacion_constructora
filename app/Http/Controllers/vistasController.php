@@ -34,8 +34,15 @@ class vistasController extends Controller
     public function mainUser(){
         return view('user.dashboard.main');
     }
+    public function noticias(){
+        return view ("admin.noticias");
+        }
 
 
-
-
+    public function mostrar(){
+        return view('techoPropio');
+    }
+    public function muestra(){
+        return  view('miVivienda');
+     }
 }

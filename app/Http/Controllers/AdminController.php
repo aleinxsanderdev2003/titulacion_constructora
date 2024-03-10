@@ -48,8 +48,6 @@ public function login(Request $request)
         return redirect()->route('admin.login.view')->with('error', 'Credenciales incorrectas');
     }
 }
-
-
 public function logout(Request $request)
 {
     // Agrega la lógica de logout, por ejemplo, para el guard 'clientes'
