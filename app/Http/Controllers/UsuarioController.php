@@ -37,12 +37,20 @@ public function updateProfile(Request $request)
             'apellidos' => 'required|string|max:255',
             'email' => 'required|email',
             'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Ajusta las extensiones y el tamaño según tus necesidades
+            'direccion'=>'required|string|max:200',
+            'celular'=>'required|numeric',
+            'edad'=>'required|numeric',
+            'estado_civil'=>'required|string|max:10',
         ]);
 
         // Actualizar los datos del usuario
         $user->nombres = $request->input('nombres');
         $user->apellidos = $request->input('apellidos');
         $user->email = $request->input('email');
+        $user->direccion=$request->input('direccion');
+        $user->celular=$request->input('celular');
+        $user->edad=$request->input('edad');
+        $user->estado_civil=$request->input('estado_civil');
 
         // Actualizar la foto de perfil si se proporciona
         if ($request->hasFile('photo')) {

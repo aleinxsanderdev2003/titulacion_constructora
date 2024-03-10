@@ -13,5 +13,5 @@ class Cliente extends Authenticatable implements AuthenticatableContract
 {
     use Notifiable, HasFactory; // Agregado
     protected $table = 'clientes';
-    protected $fillable = ['nombres', 'apellidos', 'email', 'password','photo'];
+    protected $fillable = ['nombres', 'apellidos', 'email', 'password','photo','direccion','celular','edad','estado_civil'];
 }

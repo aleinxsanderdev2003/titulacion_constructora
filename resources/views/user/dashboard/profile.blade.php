@@ -21,27 +21,30 @@
                             <label for="email" class="form-label"><i class="fas fa-envelope"></i> Correo:</label>
                             <input type="email" id="email" class="form-control" value="{{ $user->email }}" readonly>
                         </div>
+
+                        <div class="col-md-12">
+                            <label for="direccion" class="form-label"><i class="fas fa-map-marker-alt"></i> Dirección:</label>
+                            <input type="text" id="direccion" class="form-control" value="{{ $user->direccion }}" readonly>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label"><i class="fas fa-phone"></i> Número Telefónico:</label>
+                            <input type="text" id="telefono" class="form-control" value="{{ $user->celular }}" readonly>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="edad" class="form-label"><i class="fas fa-birthday-cake"></i> Edad:</label>
+                            <input type="text" id="edad" class="form-control" value="{{ $user->edad }}" readonly>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="estadoCivil" class="form-label"><i class="fas fa-heart"></i> Estado Civil:</label>
+                            <input type="text" id="estadoCivil" class="form-control" value="{{ $user->estado_civil }}" readonly>
+                        </div>
+
                     </div>
 
-                    <p class="h5 mt-4 text-center" data-bs-toggle="collapse" href="#additionalInfo" role="button" aria-expanded="false" aria-controls="additionalInfo">
-                        <i class="fas fa-plus"></i> Agregar más datos personales
-                    </p>
-                    <div class="collapse" id="additionalInfo">
-                        <div class="row mt-3">
-                            <div class="col-md-12">
-                                <label for="direccion" class="form-label"><i class="fas fa-map-marker-alt"></i> Dirección:</label>
-                                <input type="text" id="direccion" class="form-control">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="telefono" class="form-label"><i class="fas fa-phone"></i> Número Telefónico:</label>
-                                <input type="text" id="telefono" class="form-control">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="edad" class="form-label"><i class="fas fa-birthday-cake"></i> Edad:</label>
-                                <input type="text" id="edad" class="form-control">
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -62,24 +65,7 @@
     </div>
 </div>
 
- {{-- <p class="h5 mb-4 text-center">Cambiar Contraseña</p>
-                    <div class="row mb-3">
-                        <div class="col-md-4">
-                            <label for="current_password" class="form-label">Contraseña Actual:</label>
-                            <input type="password" id="current_password" class="form-control">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="new_password" class="form-label">Contraseña Nueva:</label>
-                            <input type="password" id="new_password" class="form-control">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="confirm_password" class="form-label">Confirmar Nueva Contraseña:</label>
-                            <input type="password" id="confirm_password" class="form-control">
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn btn-warning">Cambiar Contraseña</button>
-                    </div> --}}
+
 <style>
     .img-profile {
         max-width: 200px;
@@ -87,4 +73,6 @@
         border-radius: 10%;
     }
 </style>
+
+
 @endsection
