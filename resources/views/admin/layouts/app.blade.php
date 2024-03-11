@@ -52,7 +52,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Todos:</h6>
-                        <a class="collapse-item" href="">Clientes</a>
+                        <a class="collapse-item" href="{{route('admin.clientes')}}">Clientes</a>
                         <a class="collapse-item" href="">Ver todos</a>
                     </div>
                 </div>
@@ -116,11 +116,29 @@
                     </div>
                 </div>
             </li>
+
+            <hr class="sidebar-divider">
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>PÁGINAS</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Vistas:</h6>
+                        <a class="collapse-item" href="login.html">INICIO</a>
+                        <a class="collapse-item" href="register.html">NOSOTROS</a>
+                        <a class="collapse-item" href="forgot-password.html">PROGRAMAS</a>
+                        <a class="collapse-item" href="forgot-password.html">BLOG</a>
+                        <a class="collapse-item" href="forgot-password.html">CONTACTO</a>
+                    </div>
+                </div>
+            </li>
             <!-- ... tu código existente ... -->
-
 <hr class="sidebar-divider d-none d-md-block">
-
-
 <!-- Agrega un enlace de logout -->
 <!-- Agrega un enlace de logout -->
 <li class="nav-item">
@@ -150,28 +168,7 @@
     </div>
 </div>
 
-            <hr class="sidebar-divider">
 
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-
-                    </div>
-                </div>
-            </li>
 
             <hr class="sidebar-divider d-none d-md-block">
 
