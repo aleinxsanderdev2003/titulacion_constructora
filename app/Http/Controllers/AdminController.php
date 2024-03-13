@@ -17,20 +17,13 @@ public function loginAdmin()
 {
     return view('admin.auth.login');
 }
-
 public function login(Request $request)
 {
-    // Validar los datos del formulario
-    $validator = Validator::make($request->all(), [
-        'email' => 'required|email',
-        'password' => 'required',
-    ]);
-
-    if ($validator->fails()) {
-        return redirect()->route('admin.login.view')->withErrors($validator)->withInput();
-    }
-
-    $credentials = $request->only('email', 'password');
+    // Credenciales predefinidas
+    $credentials = [
+        'email' => 'admin@constructora.com',
+        'password' => '12345',
+    ];
 
     // Intento de autenticación
     if (Auth::guard('administrators')->attempt($credentials)) {
@@ -40,9 +33,8 @@ public function login(Request $request)
         // Obtener el nombre completo del usuario
         $nombreUsuario = $user->nombres . ' ' . $user->apellidos;
 
-        // Redireccionar a la página de administración del usuario
-
-        return redirect('/admin')->with('success', 'Inicio de sesión exitoso. ¡Bienvenido, ' . $nombreUsuario . '!');
+        // Redireccionar a la vista correspondiente
+        return redirect()->route('admin.welcome');
     } else {
         // Contraseña incorrecta
         return redirect()->route('admin.login.view')->with('error', 'Credenciales incorrectas');

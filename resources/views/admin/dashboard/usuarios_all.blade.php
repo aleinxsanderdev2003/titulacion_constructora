@@ -21,6 +21,19 @@
                 </select>
             </div>
         </div>
+        <div class="col-md-3">
+            <!-- Select para Distritos -->
+            <div class="mb-3">
+                <label for="distrito" class="form-label"><i class="fas fa-map-marker-alt"></i> Distrito:</label>
+                <select class="form-select" id="distrito">
+                    <option value="" selected>Selecciona un distrito</option>
+                    <option value="Miraflores">Miraflores</option>
+                    <option value="San Isidro">San Isidro</option>
+                    <option value="Surco">Surco</option>
+                    <!-- Agrega más distritos según necesites -->
+                </select>
+            </div>
+        </div>
         <div class="col-md-2">
             <div class="mb-3">
                 <label class="form-label">&nbsp;</label>
