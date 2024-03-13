@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Redirect;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
@@ -11,6 +12,11 @@ use App\Models\Cliente;
 use Illuminate\Support\Facades\Validator;
 class ClienteController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:clientes')->except(['login', 'register', 'logout']);
+    }
     public function register(Request $request)
     {
         // Validar los datos del formulario
@@ -75,17 +81,18 @@ class ClienteController extends Controller
 
 public function logout()
 {
-    Auth::guard('clientes')->logout(); // Utiliza el guard correspondiente
+    Auth::guard('clientes')->logout();
 
-    return redirect('/login'); // Redirige a la página de inicio de sesión o a donde desees
+    // Mensaje de confirmación
+
+   // Redirige al usuario al formulario de login
+   return redirect()->route('loginUser');
 }
 
-public function updateProfile(Request $request)
-    {
-        // Lógica para actualizar el perfil del cliente
-        // ...
 
-        return redirect()->route('admin.login.view');
-    }
+public function showLoginForm()
+{
+    return Redirect::route('loginUser');
+}
 
 }

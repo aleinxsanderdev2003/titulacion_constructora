@@ -109,7 +109,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js
     <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
         <!-- Agrega la ruta correspondiente para el logout -->
-        <a class="btn btn-primary" href="">Logout</a>
+<a class="btn btn-primary" href="{{ route('admin.logout') }}">Logout</a>
     </div>
 </div>
 </div>
