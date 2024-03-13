@@ -36,8 +36,11 @@ Route::group(['middleware' => ['auth:clientes']], function () {
     Route::get('/logout', [ClienteController::class, 'logout'])->name('admin.logout');
 });
 
-
-
+Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
+Route::get('/admin/clientes', [AdminVistasController::class, 'mostrarClientes'])->name('admin.clientes');
+Route::get('/admin/clientes/{id}', [AdminVistasController::class, 'verDetalleCliente'])->name('admin.cliente.verDetalle');
+Route::get('/admin/login', [AdminController::class, 'loginAdmin'])->name('admin.vistalogin');
+Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login');
 
 // Route::get('/logout', [ClienteController::class, 'logout'])->name('admin.logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

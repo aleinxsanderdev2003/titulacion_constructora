@@ -35,7 +35,7 @@
                                 <div class="col-md-12">
                                     <div class="card-body p-4 p-lg-5 text-black">
 
-                                        <form method="post" action="{{ route('login.admin') }}" class="d-flex flex-column align-items-center">
+                                        <form method="post" action="{{ route('admin.login') }}" class="d-flex flex-column align-items-center">
                                             @csrf <!-- Agrega el campo csrf -->
                                             <div class="d-flex align-items-center mb-3 pb-1">
                                                 <span class="h1 fw-bold mb-0 text-center"><img width="45%" src="{{asset('img/EMPRESA.png')}}" class="img-fluid" alt=""></span>

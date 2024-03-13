@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use App\Models\Departamento;
+use App\Models\Provincia;
+use App\Models\Distrito;
 class AdminVistasController extends Controller
 {
     public function mostrarClientes()
 {
     $clientes = Cliente::all();
-    return view('admin.dashboard.usuarios_all', ['clientes' => $clientes]);
+    $departamentos = Departamento::all();
+    $provincias = Provincia::all();
+    $distritos = Distrito::all();
+
+    return view('admin.dashboard.usuarios_all', compact('clientes', 'departamentos', 'provincias', 'distritos'));
+
 }
 public function verDetalleCliente($id)
 {

@@ -12,28 +12,41 @@
             <!-- Select para Departamentos -->
             <div class="mb-3">
                 <label for="departamento" class="form-label"><i class="fas fa-map-marker-alt"></i> Departamento:</label>
-                <select class="form-select" id="departamento">
+                <select class="form-select" id="departamento" name="departamento">
                     <option value="" selected>Selecciona un departamento</option>
-                    <option value="Lima">Lima</option>
-                    <option value="Arequipa">Arequipa</option>
-                    <option value="Cusco">Cusco</option>
-                    <!-- Agrega más departamentos según necesites -->
+                    @foreach($departamentos as $departamento)
+                    <option value="{{ $departamento->id }}">{{ $departamento->nombre }}</option>
+                @endforeach
                 </select>
             </div>
         </div>
+
+        <div class="col-md-3">
+            <!-- Select para Provincias -->
+            <div class="mb-3">
+                <label for="provincia" class="form-label"><i class="fas fa-map-marker-alt"></i> Provincia:</label>
+                <select class="form-select" id="provincia" disabled>
+                    <option value="" selected>Selecciona una provincia</option>
+                    @foreach($provincias as $provincia)
+                    <option value="{{ $provincia->id }}">{{ $provincia->nombre }}</option>
+                @endforeach
+                </select>
+            </div>
+        </div>
+
         <div class="col-md-3">
             <!-- Select para Distritos -->
             <div class="mb-3">
                 <label for="distrito" class="form-label"><i class="fas fa-map-marker-alt"></i> Distrito:</label>
-                <select class="form-select" id="distrito">
+                <select class="form-select" id="distrito" disabled>
                     <option value="" selected>Selecciona un distrito</option>
-                    <option value="Miraflores">Miraflores</option>
-                    <option value="San Isidro">San Isidro</option>
-                    <option value="Surco">Surco</option>
-                    <!-- Agrega más distritos según necesites -->
+                    @foreach($distritos as $distrito)
+        <option value="{{ $distrito->id }}">{{ $distrito->nombre }}</option>
+    @endforeach
                 </select>
             </div>
         </div>
+
         <div class="col-md-2">
             <div class="mb-3">
                 <label class="form-label">&nbsp;</label>
