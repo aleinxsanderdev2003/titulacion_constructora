@@ -15,7 +15,7 @@
                 <select class="form-select" id="departamento" name="departamento">
                     <option value="" selected>Selecciona un departamento</option>
                     @foreach($departamentos as $departamento)
-                    <option value="{{ $departamento->id }}">{{ $departamento->nombre }}</option>
+                    <option value="{{ $departamento->id }}">{{ $departamento->nombre_departamento }}</option>
                 @endforeach
                 </select>
             </div>
@@ -25,10 +25,10 @@
             <!-- Select para Provincias -->
             <div class="mb-3">
                 <label for="provincia" class="form-label"><i class="fas fa-map-marker-alt"></i> Provincia:</label>
-                <select class="form-select" id="provincia" disabled>
+                <select class="form-select" id="provincia">
                     <option value="" selected>Selecciona una provincia</option>
                     @foreach($provincias as $provincia)
-                    <option value="{{ $provincia->id }}">{{ $provincia->nombre }}</option>
+                    <option value="{{ $provincia->id }}">{{ $provincia->nombre_provincia }}</option>
                 @endforeach
                 </select>
             </div>
@@ -38,14 +38,17 @@
             <!-- Select para Distritos -->
             <div class="mb-3">
                 <label for="distrito" class="form-label"><i class="fas fa-map-marker-alt"></i> Distrito:</label>
-                <select class="form-select" id="distrito" disabled>
+                <select class="form-select" id="distrito">
                     <option value="" selected>Selecciona un distrito</option>
                     @foreach($distritos as $distrito)
-        <option value="{{ $distrito->id }}">{{ $distrito->nombre }}</option>
-    @endforeach
+        <option value="{{ $distrito->id }}">{{ $distrito->nombre_distrito }}</option>
+                @endforeach
                 </select>
             </div>
         </div>
+
+
+
 
         <div class="col-md-2">
             <div class="mb-3">

@@ -34,6 +34,11 @@ Route::group(['middleware' => ['auth:clientes']], function () {
     Route::get('/dashboard-user-profile-edit', [UsuarioController::class, 'editProfile'])->name('user.dashboard.profile_edit');
     Route::post('/dashboard-user-profile/update', [UsuarioController::class, 'updateProfile'])->name('user.profile.update');
     Route::get('/logout', [ClienteController::class, 'logout'])->name('admin.logout');
+    Route::get('/dashboard/cargar-documentos', [ClienteController::class, 'mostrarFormularioDocumentos'])->name('cliente.documentos.form');
+    Route::post('/dashboard/cargar-documentos', [ClienteController::class, 'storeDocumentos'])->name('cliente.documentos.store');
+    Route::get('/dashboard/ver-documentos', [UsuarioController::class, 'verDocumentos'])->name('cliente.ver_documentos');
+    Route::post('/dashboard/ver-documentos/{id}/delete', [ClienteController::class, 'deleteDocumento'])->name('cliente.documentos.delete');
+
 });
 
 Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
@@ -41,6 +46,7 @@ Route::get('/admin/clientes', [AdminVistasController::class, 'mostrarClientes'])
 Route::get('/admin/clientes/{id}', [AdminVistasController::class, 'verDetalleCliente'])->name('admin.cliente.verDetalle');
 Route::get('/admin/login', [AdminController::class, 'loginAdmin'])->name('admin.vistalogin');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login');
+
 
 // Route::get('/logout', [ClienteController::class, 'logout'])->name('admin.logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -11,6 +11,11 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Authenticatable implements AuthenticatableContract
 
 {
+    public function documentos()
+{
+    return $this->hasMany(Documento::class);
+}
+
     use Notifiable, HasFactory; // Agregado
     protected $table = 'clientes';
     protected $fillable = ['nombres', 'apellidos', 'email', 'password','photo','direccion','celular','edad','estado_civil'];

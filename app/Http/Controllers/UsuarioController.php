@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+
 use Illuminate\Support\Facades\Storage;
 
 class UsuarioController extends Controller
@@ -73,6 +74,15 @@ public function updateProfile(Request $request)
         // Manejar el caso en que el usuario no esté autenticado
         return redirect()->route('loginUser');
     }
+
+
 }
+
+public function verDocumentos()
+{
+    $cliente = Cliente::findOrFail(Auth::id());
+    return view('user.dashboard.ver_documentos', compact('cliente'));
+}
+
 
 }
