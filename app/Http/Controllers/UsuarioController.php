@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
-
+use App\Models\Mensaje;
 use Illuminate\Support\Facades\Storage;
 
 class UsuarioController extends Controller
@@ -82,6 +82,35 @@ public function verDocumentos()
 {
     $cliente = Cliente::findOrFail(Auth::id());
     return view('user.dashboard.ver_documentos', compact('cliente'));
+}
+
+public function mostrarChat()
+{
+    // Obtener los mensajes del cliente y del admin ordenados por fecha de creación
+    $mensajes = Mensaje::where('cliente_id', auth()->id())
+                       ->orWhereNull('cliente_id') // Mensajes del admin
+                       ->orderBy('created_at', 'asc')
+                       ->get();
+
+    // Retornar la vista del chat con los mensajes
+    return view('user.dashboard.chat', compact('mensajes'));
+}
+
+public function enviarMensaje(Request $request)
+{
+    // Validar el mensaje
+    $request->validate([
+        'mensaje' => 'required|string|max:255',
+    ]);
+
+    // Crear un nuevo mensaje
+    $mensaje = new Mensaje();
+    $mensaje->cliente_id = auth()->id();
+    $mensaje->mensaje = $request->mensaje;
+    $mensaje->save();
+
+    // Redireccionar de vuelta al chat con un mensaje de éxito
+    return redirect()->route('cliente.mostrarChat');
 }
 
 

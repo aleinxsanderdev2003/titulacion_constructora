@@ -68,8 +68,8 @@
 
 <style>
     .img-profile {
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 365px;
+        max-height: 365px;
         border-radius: 10%;
     }
 </style>

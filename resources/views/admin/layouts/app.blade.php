@@ -74,6 +74,21 @@
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMensajes"
+                    aria-expanded="true" aria-controls="collapseMensajes">
+                    <i class="fas fa-fw fa-shopping-cart"></i>
+                    <span>Solicitudes</span>
+                </a>
+                <div id="collapseMensajes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Todos:</h6>
+                        <a class="collapse-item" href="{{route('admin.mensajes.index')}}">Mensajes</a>
+                        <a class="collapse-item" href="cards.html">Enviar Mensaje </a>
+                    </div>
+                </div>
+            </li>
+
 
 
 

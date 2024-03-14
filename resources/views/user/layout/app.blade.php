@@ -76,19 +76,19 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js
                 </div>
             </li>
             <div class="sidebar-heading">
-                Pagina Web
+                SOLICITUDES
             </div>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecomponents"
                     aria-expanded="true" aria-controls="collapsecomponents">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Componentes</span>
+                    <span>MENSAJERIA</span>
                 </a>
                 <div id="collapsecomponents" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="{{route('cliente.mostrarChat')}}"">ENVIAR MENSAJES</a>
                         <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js
             </a>
             <!-- Dropdown - Información del Usuario -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{{ route('user.dashboard.profile') }}">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Perfil
                 </a>

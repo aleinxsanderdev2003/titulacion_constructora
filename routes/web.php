@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\View;
 use App\Http\Controllers\AdminVistasController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\DocumentoController;
  // RUTAS WEB
  Route::get('/techo-propio', [vistasController::class, 'mostrar'])->name('techoPropio');
  Route::get('/mi-Vivienda', [vistasController::class, 'muestra'])->name('miVivienda');
@@ -38,6 +39,8 @@ Route::group(['middleware' => ['auth:clientes']], function () {
     Route::post('/dashboard/cargar-documentos', [ClienteController::class, 'storeDocumentos'])->name('cliente.documentos.store');
     Route::get('/dashboard/ver-documentos', [UsuarioController::class, 'verDocumentos'])->name('cliente.ver_documentos');
     Route::post('/dashboard/ver-documentos/{id}/delete', [ClienteController::class, 'deleteDocumento'])->name('cliente.documentos.delete');
+    Route::get('/dashboard/chat', [UsuarioController::class, 'mostrarChat'])->name('cliente.mostrarChat');
+    Route::post('/dashboard/chat/enviar', [UsuarioController::class, 'enviarMensaje'])->name('cliente.enviarMensaje');
 
 });
 
@@ -46,6 +49,10 @@ Route::get('/admin/clientes', [AdminVistasController::class, 'mostrarClientes'])
 Route::get('/admin/clientes/{id}', [AdminVistasController::class, 'verDetalleCliente'])->name('admin.cliente.verDetalle');
 Route::get('/admin/login', [AdminController::class, 'loginAdmin'])->name('admin.vistalogin');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login');
+Route::get('/admin/documento/{id}/download/{format}', [DocumentoController::class, 'downloadDocumento'])->name('admin.documento.download');
+Route::get('/admin/dashboard/mensajes', [AdminVistasController::class, 'verMensajes'])->name('admin.mensajes.index');
+Route::get('/admin/dashboard/mensajes/show/{cliente_id}',  [AdminVistasController::class, 'verMensajes'])->name('mensajes.show');
+
 
 
 // Route::get('/logout', [ClienteController::class, 'logout'])->name('admin.logout');

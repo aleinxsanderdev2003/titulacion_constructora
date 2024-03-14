@@ -43,6 +43,12 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header bg-gradient-primary text-white">
@@ -61,6 +67,34 @@
 </div>
 
 
+{{-- Sección de documentos --}}<div class="container mt-4">
+    <div class="row">
+        {{-- Iterar sobre los documentos --}}
+        @foreach($documentos as $documento)
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    {{-- Encabezado de la tarjeta --}}
+                    <div class="card-header bg-gradient-primary text-white">
+                        <h5 class="mb-0 text-center">{{ $documento->nombre }}</h5>
+                    </div>
+                    {{-- Cuerpo de la tarjeta --}}
+                    <div class="card-body">
+                        {{-- Imagen del documento --}}
+                        <img src="{{ asset('storage/' . $documento->ruta) }}" class="card-img-top img-fluid" alt="{{ $documento->nombre }}">
+                        {{-- Detalles del documento --}}
+                        <p class="card-text">Subido el: {{ $documento->created_at->format('d/m/Y') }}</p>
+                        {{-- Enlace para descargar como imagen --}}
+                        <a href="{{ route('admin.documento.download', ['id' => $documento->id, 'format' => 'image']) }}" class="btn btn-primary btn-sm">Descargar como imagen</a>
+                        {{-- Enlace para descargar como PDF --}}
+                        <a href="{{ route('admin.documento.download', ['id' => $documento->id, 'format' => 'pdf']) }}" class="btn btn-primary btn-sm">Descargar como PDF</a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
+
+
 
 <style>
     .img-profile {
@@ -69,61 +103,4 @@
         border-radius: 10%;
     }
 </style>
-
-
-{{-- 4 CARDS DE DOCUMENTOS PDF  --}}
-<div class="container mt-4">
-    <div class="row">
-
-        <!-- Card 1 -->
-        <div class="col-md-3 mb-4">
-            <div class="card">
-                <div class="card-header bg-gradient-primary text-white">
-                    <h5 class="mb-0 text-center">Documento 1</h5>
-                </div>
-                <div class="card-body">
-                    <!-- Contenido del documento 1 -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-3 mb-4">
-            <div class="card">
-                <div class="card-header bg-gradient-primary text-white">
-                    <h5 class="mb-0 text-center">Documento 2</h5>
-                </div>
-                <div class="card-body">
-                    <!-- Contenido del documento 2 -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-3 mb-4">
-            <div class="card">
-                <div class="card-header bg-gradient-primary text-white">
-                    <h5 class="mb-0 text-center">Documento 3</h5>
-                </div>
-                <div class="card-body">
-                    <!-- Contenido del documento 3 -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col-md-3 mb-4">
-            <div class="card">
-                <div class="card-header bg-gradient-primary text-white">
-                    <h5 class="mb-0 text-center">Documento 4</h5>
-                </div>
-                <div class="card-body">
-                    <!-- Contenido del documento 4 -->
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
 @endsection
