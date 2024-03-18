@@ -47,8 +47,10 @@ Route::group(['middleware' => ['auth:clientes']], function () {
 Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
 Route::get('/admin/clientes', [AdminVistasController::class, 'mostrarClientes'])->name('admin.clientes');
 Route::get('/admin/clientes/{id}', [AdminVistasController::class, 'verDetalleCliente'])->name('admin.cliente.verDetalle');
+
 Route::get('/admin/login', [AdminController::class, 'loginAdmin'])->name('admin.vistalogin');
 Route::post('/admin/login', [AdminController::class, 'authenticateAdmin'])->name('admin.authenticate');
+
 Route::get('/admin/documento/{id}/download/{format}', [DocumentoController::class, 'downloadDocumento'])->name('admin.documento.download');
 Route::get('/admin/dashboard/mensajes', [AdminVistasController::class, 'verMensajes'])->name('admin.mensajes.index');
 Route::post('/admin/dashboard/mensajes/show/{cliente_id}',  [AdminVistasController::class, 'verMensajes'])->name('mensajes.show');

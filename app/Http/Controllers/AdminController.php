@@ -1,8 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+
+
+
 use Illuminate\Support\Facades\Validator;
 class AdminController extends Controller
 {
@@ -20,15 +27,40 @@ public function loginAdmin()
 
 public function authenticateAdmin(Request $request)
 {
-    $credentials = $request->only('email', 'password');
+    // Obtener las credenciales del formulario
+    $email = $request->input('email');
+    $password = $request->input('password');
 
-    if (Auth::attempt($credentials)) {
-        // Authentication passed...
-        return redirect()->intended('/admin/dashboard');
+    // Validar las credenciales
+    if (empty($email) || empty($password)) {
+        return redirect()->back()->withErrors(['error' => 'Por favor, proporciona un correo electrónico y una contraseña']);
     }
 
-    return redirect()->back()->withInput()->withErrors(['error' => 'Credenciales inválidas']);
+    // Buscar al administrador en la base de datos
+    $admin = DB::table('administrators')->where('email', $email)->first();
+
+    if ($admin) {
+        // Verificar si la contraseña es correcta
+        if ($this->checkPassword($password, $admin->password)) {
+            // Autenticación exitosa
+            return redirect()->intended('/admin')->with('success', 'Inicio de sesión exitoso. ¡Bienvenido, ' . $admin->name . '!');
+        }
+    }
+
+    // Credenciales inválidas
+    return redirect()->back()->withErrors(['error' => 'Credenciales inválidas']);
 }
+
+private function checkPassword($password, $hashedPassword)
+{
+    // Verificar si la contraseña cifrada almacenada coincide con la contraseña proporcionada
+    return DB::select("SELECT PASSWORD('$password') = '$hashedPassword' AS password_match")[0]->password_match == 1;
+}
+
+
+
+
+
 
 
 public function logout(Request $request)

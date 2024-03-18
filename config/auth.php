@@ -18,10 +18,10 @@ return [
         ],
 
 
-        'users' => [
-            'driver' => 'session', // Puedes usar 'session' o 'token' según tus necesidades.
-            'provider' => 'users', // Cambia esto si tu proveedor se llama de otra manera.
-        ],
+        // 'users' => [
+        //     'driver' => 'session',
+        //     'provider' => 'users',
+        // ],
 
         'clientes'=>[
             'driver' =>'session',
@@ -38,10 +38,10 @@ return [
 
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
-        ],
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\User::class,
+        // ],
         'clientes' => [
             'driver' => 'eloquent',
             'model' => App\Models\Cliente::class, // Asegúrate de especificar el modelo correcto para tus clientes.
@@ -68,6 +68,13 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+        // 'users' => [
+        //     'provider' => 'users',
+        //     'table' => 'password_resets_users',
+        //     'expire' => 60,
+        //     'throttle' => 60,
+        // ],
     ],
 
     'password_timeout' => 10800,

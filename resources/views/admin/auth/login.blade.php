@@ -35,7 +35,7 @@
                                 <div class="col-md-12">
                                     <div class="card-body p-4 p-lg-5 text-black">
 
-                                        <form method="post" action="{{ route('admin.authenticate') }}" class="d-flex flex-column align-items-center">
+                                        <form method="post" action="{{ route('admin.authenticate') }}" class="d-flex flex-column align-items-center" id="loginForm">
                                             @csrf <!-- Agrega el campo csrf -->
                                             <div class="d-flex align-items-center mb-3 pb-1">
                                                 <span class="h1 fw-bold mb-0 text-center"><img width="45%" src="{{asset('img/EMPRESA.png')}}" class="img-fluid" alt=""></span>
@@ -66,6 +66,11 @@
                 </div>
             </div>
         </section>
+
+
+
+
+
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
