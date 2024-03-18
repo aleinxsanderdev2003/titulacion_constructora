@@ -17,28 +17,17 @@ public function loginAdmin()
 {
     return view('admin.auth.login');
 }
-public function login(Request $request)
+
+public function authenticateAdmin(Request $request)
 {
-    // Credenciales predefinidas
-    $credentials = [
-        'email' => 'admin@constructora.com',
-        'password' => '12345',
-    ];
+    $credentials = $request->only('email', 'password');
 
-    // Intento de autenticación
-    if (Auth::guard('administrators')->attempt($credentials)) {
-        // Obtener el usuario autenticado
-        $user = Auth::guard('administrators')->user();
-
-        // Obtener el nombre completo del usuario
-        $nombreUsuario = $user->nombres . ' ' . $user->apellidos;
-
-        // Redireccionar a la vista correspondiente
-        return redirect()->route('admin.welcome');
-    } else {
-        // Contraseña incorrecta
-        return redirect()->route('admin.login.view')->with('error', 'Credenciales incorrectas');
+    if (Auth::attempt($credentials)) {
+        // Authentication passed...
+        return redirect()->intended('/admin/dashboard');
     }
+
+    return redirect()->back()->withInput()->withErrors(['error' => 'Credenciales inválidas']);
 }
 
 
