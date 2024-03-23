@@ -83,10 +83,10 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://kit.fontawesome.com/6b76d54a65.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/6b76d54a65.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/scrollmagic/ScrollMagic.min.js') }}"></script>
     <script src="{{ asset('js/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>

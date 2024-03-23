@@ -17,17 +17,16 @@ Route::get('/', [InicioController::class, 'pruebaindex'])->name('index');
 Route::get('/contacto' , [vistasController::class, 'contacto'])->name('contacto');
 Route::get('/nosotros' , [vistasController::class, 'nosotros'])->name('nosotros');
 
-// rutas para el login
+// rutas para el login del cliente
 Route::get('/IniciarSesion', [vistasController::class, 'loginUser'])->name('loginUser');
 Route::post('/login', [ClienteController::class, 'login'])->name('login');
 Route::get('/forgotPassword', [vistasController::class, 'forgotPass'])->name('forgotPass');
 
-// rutas de post y get de register
+// rutas de post y get de register del cliente
 Route::get('/Registrarse', [vistasController::class, 'registerUser'])->name('registerUser');
 Route::post('/register', [ClienteController::class, 'register'])->name('register');
 
-// ADMIN RUTAS
-
+//rutas protegidas del cliente
 Route::group(['middleware' => ['auth:clientes']], function () {
     Route::get('/usuario', [UsuarioController::class, 'UsuarioIndex'])->name('user.UsuarioIndex');
     Route::get('/dashboard-user', [vistasController::class, 'mainUser'])->name('user.dashboard');
@@ -44,13 +43,34 @@ Route::group(['middleware' => ['auth:clientes']], function () {
 
 });
 
-Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
-Route::get('/admin/clientes', [AdminVistasController::class, 'mostrarClientes'])->name('admin.clientes');
-Route::get('/admin/clientes/{id}', [AdminVistasController::class, 'verDetalleCliente'])->name('admin.cliente.verDetalle');
 
+//login del Admin
 Route::get('/admin/login', [AdminController::class, 'loginAdmin'])->name('admin.vistalogin');
 Route::post('/admin/login', [AdminController::class, 'authenticateAdmin'])->name('admin.authenticate');
 
+
+
+
+//rutas protegidas para el Admin
+
+// Route::group(['middleware' => ['auth:administrators', 'App\Http\Middleware\AuthenticateAdmin']], function(){
+//     Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
+//     Route::get('/admin/clientes', [AdminVistasController::class, 'mostrarClientes'])->name('admin.clientes');
+//     Route::get('/admin/clientes/{id}', [AdminVistasController::class, 'verDetalleCliente'])->name('admin.cliente.verDetalle');
+//     Route::get('/logouts', [AdminController::class, 'logout'])->name('admin.logouts');
+//     Route::get('/admin/documento/{id}/download/{format}', [DocumentoController::class, 'downloadDocumento'])->name('admin.documento.download');
+//     Route::get('/admin/dashboard/mensajes', [AdminVistasController::class, 'verMensajes'])->name('admin.mensajes.index');
+//     Route::post('/admin/dashboard/mensajes/show/{cliente_id}',  [AdminVistasController::class, 'verMensajes'])->name('mensajes.show');
+// });
+
+
+
+
+
+Route::get('/admin', [AdminController::class, 'welcome'])->name('admin.welcome');
+Route::get('/admin/clientes', [AdminVistasController::class, 'mostrarClientes'])->name('admin.clientes');
+Route::get('/admin/clientes/{id}', [AdminVistasController::class, 'verDetalleCliente'])->name('admin.cliente.verDetalle');
+Route::get('/logouts', [AdminController::class, 'logout'])->name('admin.logouts');
 Route::get('/admin/documento/{id}/download/{format}', [DocumentoController::class, 'downloadDocumento'])->name('admin.documento.download');
 Route::get('/admin/dashboard/mensajes', [AdminVistasController::class, 'verMensajes'])->name('admin.mensajes.index');
 Route::post('/admin/dashboard/mensajes/show/{cliente_id}',  [AdminVistasController::class, 'verMensajes'])->name('mensajes.show');

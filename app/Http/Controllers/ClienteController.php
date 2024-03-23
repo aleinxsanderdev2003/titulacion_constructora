@@ -19,6 +19,7 @@ class ClienteController extends Controller
     {
         $this->middleware('auth:clientes')->except(['login', 'register', 'logout']);
     }
+
     public function register(Request $request)
     {
         // Validar los datos del formulario
@@ -147,24 +148,26 @@ public function storeDocumentos(Request $request)
 
 
 //FUNCION PARA QUITAR EL DOCUMENTO SUBIDO
-public function deleteDocumento($id)
-{
-    $documento = Documento::findOrFail($id);
+    public function deleteDocumento($id)
+    {
+        $documento = Documento::findOrFail($id);
 
-    // Verificar si el usuario tiene permiso para eliminar el documento
-    if ($documento->cliente_id != auth()->id()) {
-        return redirect()->back()->with('error', 'No tienes permiso para eliminar este documento.');
+        // Verificar si el usuario tiene permiso para eliminar el documento
+        if ($documento->cliente_id != auth()->id()) {
+            return redirect()->back()->with('error', 'No tienes permiso para eliminar este documento.');
+        }
+
+        // Eliminar el archivo del sistema de archivos
+        $rutaArchivo = storage_path('app/public/' . $documento->ruta);
+        if (File::exists($rutaArchivo)) {
+            File::delete($rutaArchivo);
+        }
+
+        // Eliminar el registro de la base de datos
+        $documento->delete();
+
+        return redirect()->back()->with('success', 'Documento eliminado correctamente.');
     }
 
-    // Eliminar el archivo del sistema de archivos
-    $rutaArchivo = storage_path('app/public/' . $documento->ruta);
-    if (File::exists($rutaArchivo)) {
-        File::delete($rutaArchivo);
-    }
 
-    // Eliminar el registro de la base de datos
-    $documento->delete();
-
-    return redirect()->back()->with('success', 'Documento eliminado correctamente.');
-}
 }
