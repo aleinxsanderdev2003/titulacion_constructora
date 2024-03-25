@@ -19,6 +19,7 @@ class UsuarioController extends Controller
         $user = Auth::guard('clientes')->user();
         return view('user.dashboard.profile', ['user' => $user]);
     }
+    
     public function editProfile()
 {
     $user = Auth::guard('clientes')->user();

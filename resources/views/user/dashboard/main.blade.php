@@ -2,8 +2,12 @@
 
 
 @section('content')
-
-
+<style>
+    #fondo-gris{
+        background-color: rgb(180, 180, 180);
+    }
+</style>
+<div id="fondo-gris">
    {{--  <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -132,7 +136,7 @@
             </div>
         </div>
     </div>
-
+</div>
 <!-- Agrega esto en la sección head de tu HTML -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

@@ -192,9 +192,43 @@
             </div>
         </ul>
 
+
+
             <div id="content-wrapper" class="d-flex flex-column">
                 <div id="content">
                     <div class="container-fluid">
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+    <!-- Enlace para ir al inicio -->
+    <a class="navbar-brand" href="#">
+
+    </a>
+
+    <!-- Navbar - Botón para desplegar el menú -->
+    <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <!-- Navbar - Right Side -->
+    <ul class="navbar-nav ml-auto">
+        <!-- Icono de perfil -->
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h6 class="text-black">Bienvenido, {{ auth('administrators')->user()->name }}</h6>&nbsp;
+                <!-- Agrega aquí el icono de perfil -->
+                <i class="fas fa-user-circle fa-fw fa-lg"></i>
+
+            </a>
+            <!-- Dropdown - User Information -->
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <!-- Agrega aquí los enlaces para cerrar sesión, cambiar contraseña, etc. -->
+                <a class="dropdown-item" href="#">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                </a>
+            </div>
+        </li>
+    </ul>
+</nav>
 
                         <!-- Agrega un yield para el contenido específico de cada página -->
                         @yield('content')

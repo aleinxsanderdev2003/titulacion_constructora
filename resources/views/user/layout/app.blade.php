@@ -31,7 +31,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js
 </head>
 
 <body id="page-top">
-
+    <div id="background-gris">
     <div id="wrapper">
         <ul style="background: linear-gradient(0deg, rgba(241,139,14,1) 25%, rgba(241,139,14,1) 50%, rgba(82,80,79,1) 100%);" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -170,8 +170,15 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js
     </ul>
 
 </nav>
+<style>
+    #background-gris{
+        background: rgb(212, 212, 212);
+    }
+</style>
+
                         <!-- Agrega un yield para el contenido específico de cada página -->
                         @yield('content')
+
                     </div>
                 </div>
 
@@ -212,6 +219,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js
 
         </div>
     </div>
+</div>
     @if(session('success') || session('error'))
     <script>
         document.addEventListener('DOMContentLoaded', function() {

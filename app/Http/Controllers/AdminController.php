@@ -19,13 +19,16 @@ class AdminController extends Controller
     //     $this->middleware('auth:administrators')->except(['loginAdmin','authenticateAdmin','logout','checkPassword']);
     // }
 
-
     public function welcome()
     {
-         // Verifica si el usuario está autenticado
-    // Si el usuario está autenticado, muestra la vista principal del administrador
-    return view('admin.main');
+        // Obtiene al administrador autenticado
+        $admin = Auth::guard('administrators')->user();
+
+        // Devuelve la vista principal 'admin.main', pasando los datos del administrador
+        return view('admin.main', compact('admin'));
     }
+
+
 
 public function loginAdmin()
 {
@@ -59,12 +62,11 @@ public function authenticateAdmin(Request $request)
     return redirect()->back()->withErrors(['error' => 'Credenciales inválidas']);
 }
 
-    private function checkPassword($password, $hashedPassword)
-    {
-        // Verificar si la contraseña cifrada almacenada coincide con la contraseña proporcionada
-        return DB::select("SELECT PASSWORD('$password') = '$hashedPassword' AS password_match")[0]->password_match == 1;
-    }
-
+private function checkPassword($password, $hashedPassword)
+{
+    // Verificar si la contraseña proporcionada coincide con el hash almacenado
+    return Hash::check($password, $hashedPassword);
+}
 
 
 
