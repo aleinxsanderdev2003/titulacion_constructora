@@ -37,22 +37,54 @@ class AdminVistasController extends Controller
     }
     // Asegúrate de importar el modelo Cliente si aún no lo has hecho
 
+
+
     public function verMensajes()
     {
         // Obtener todos los mensajes ordenados por fecha de creación
         $mensajes = Mensaje::orderBy('created_at', 'desc')->get();
 
-        // Obtener la lista de todos los clientes
-        $clientes = Cliente::all();
+        // Obtener todos los clientes con sus mensajes
+        $clientesConMensajes = Cliente::with('mensajes')->get();
 
         // Retornar la vista con los mensajes y la lista de clientes
-        return view('admin.dashboard.ver_mensajes', compact('mensajes', 'clientes'));
+        return view('admin.dashboard.ver_mensajes', compact('mensajes', 'clientesConMensajes'));
     }
-    public function show($cliente_id)
-    {
-        $cliente = Cliente::find($cliente_id);
-        $mensajes = $cliente->mensajes; // Suponiendo que tienes una relación "mensajes" en tu modelo Cliente
 
+
+
+
+
+    //Mostrar los chats del cliente mediante un alert de sweet alert2
+    public function mostrarChatCliente($cliente_id)
+    {
+        // Obtener el cliente y sus mensajes
+        $cliente = Cliente::findOrFail($cliente_id);
+        $mensajes = $cliente->mensajes;
+
+        // Devolver la vista del chat del cliente
         return view('admin.dashboard.mensajes_chat', compact('cliente', 'mensajes'));
     }
+
+    public function enviarMensaje(Request $request)
+    {
+        // Validar el mensaje y verificar la existencia del cliente
+        $request->validate([
+            'cliente_id' => 'required|exists:clientes,id',
+            'mensaje' => 'required|string|max:255',
+        ]);
+
+        // Crear un nuevo mensaje del administrador
+        $mensaje = new Mensaje();
+        $mensaje->cliente_id = $request->cliente_id;
+        $mensaje->admin_id = auth()->id(); // Obtener el ID del administrador autenticado
+        $mensaje->mensaje = $request->mensaje;
+        $mensaje->save();
+
+        // Redirigir de vuelta al chat del cliente con un mensaje de éxito
+        return redirect()->back()->with('success', 'Documento eliminado correctamente.');
+
+
+
+}
 }

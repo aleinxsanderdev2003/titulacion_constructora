@@ -72,9 +72,11 @@ Route::get('/admin/clientes', [AdminVistasController::class, 'mostrarClientes'])
 Route::get('/admin/clientes/{id}', [AdminVistasController::class, 'verDetalleCliente'])->name('admin.cliente.verDetalle');
 Route::get('/logouts', [AdminController::class, 'logout'])->name('admin.logouts');
 Route::get('/admin/documento/{id}/download/{format}', [DocumentoController::class, 'downloadDocumento'])->name('admin.documento.download');
-Route::get('/admin/dashboard/mensajes', [AdminVistasController::class, 'verMensajes'])->name('admin.mensajes.index');
-Route::post('/admin/dashboard/mensajes/show/{cliente_id}',  [AdminVistasController::class, 'verMensajes'])->name('mensajes.show');
+Route::get('/admin/dashboard/mensajes', [AdminVistasController::class, 'verMensajes'])->name('admin.verMensajes');
 
+Route::post('admin/enviar-mensaje', [AdminVistasController::class, 'enviarMensaje'])->name('admin.enviarMensaje');
+
+Route::get('admin/chat/{cliente_id}', [AdminVistasController::class, 'mostrarChatCliente'])->name('admin.mostrarChatCliente');
 
 
 // Route::get('/logout', [ClienteController::class, 'logout'])->name('admin.logout');

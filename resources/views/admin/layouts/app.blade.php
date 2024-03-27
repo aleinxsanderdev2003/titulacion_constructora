@@ -83,7 +83,7 @@
                 <div id="collapseMensajes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Todos:</h6>
-                        <a class="collapse-item" href="{{route('admin.mensajes.index')}}">Mensajes</a>
+                        <a class="collapse-item" href="{{route('admin.verMensajes')}}">Mensajes</a>
                         <a class="collapse-item" href="cards.html">Enviar Mensaje </a>
                     </div>
                 </div>

@@ -21,7 +21,7 @@ return new class extends Migration
 
             // Relaciones con usuarios
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
-            $table->foreign('admin_id')->references('id')->on('users')->onDelete('set null');
+            $table->foreign('admin_id')->references('id')->on('administrators')->onDelete('set null');
         });
     }
 
